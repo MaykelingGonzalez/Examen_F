@@ -69,7 +69,14 @@
                 href="{{ route('suppliers.index') }}" wire:navigate>
                 <i class="fas fa-dove" style="color: #666cd9;"></i> Proveedores
             </a>
-        </li>        
+        </li>
+
+        <li class="nav-item {{ Request::route()->named('type_suppliers.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('type_suppliers.index') ? 'active' : '' }}"
+                href="{{ route('type_suppliers.index') }}" wire:navigate>
+                <i class="fas fa-dove" style="color: #666cd9;"></i> Tipos de Proveedores
+            </a>
+        </li>   
        
     </ul>
 </div>

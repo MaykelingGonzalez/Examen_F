@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Supplier;  
 use App\Http\Requests\SupplierRequest;
 use App\Models\TypeSupplier;
+use App\Exports\SuppliersExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class SupplierController extends Controller
 {
@@ -75,5 +77,10 @@ class SupplierController extends Controller
         $suppliers = Supplier::find($id);
         $suppliers->delete();
         return redirect()->route('suppliers.index')->with('deleted', 'Proveedor eliminado exitosamente.');
+    }
+
+    public function export()
+    {
+        return Excel::download(new SuppliersExport, 'ReporteProveedores.xlsx');
     }
 }
