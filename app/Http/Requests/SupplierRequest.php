@@ -24,6 +24,7 @@ class SupplierRequest extends FormRequest
     {
         return [
             'supplier_code' => ['required', 'string', 'max:20', 'min:5',Rule::unique('suppliers')->ignore($this->supplier)],
+            'supplier_type' => ['required', 'string', 'max:20', 'min:3'],
             'company' => 'required|string|max:100|min:3',
             'representative' => 'required|string|max:100|min:17',
             'telephone' => ['required', 'string', 'min:14', Rule::unique('suppliers')->ignore($this->supplier)],
@@ -42,6 +43,11 @@ class SupplierRequest extends FormRequest
             'supplier_code.max' => 'El campo "código del proveedor" no puede tener más de 20 caracteres.',
             'supplier_code.min' => 'El campo "código del proveedor" debe tener al menos 5 caracteres.',
             'supplier_code.unique' => 'El campo "código del proveedor" debe ser único.',
+
+            'supplier_type.required' => 'El campo "tipo de proveedor" es obligatorio.',
+            'supplier_type.string' => 'El campo "tipo de proveedor" debe ser una cadena de texto.',
+            'supplier_type.max' => 'El campo "tipo de proveedor" no puede tener más de 20 caracteres.',
+            'supplier_type.min' => 'El campo "tipo de proveedor" debe tener al menos 3 caracteres.',
 
             'company.required' => 'El campo "empresa" es obligatorio.',
             'company.string' => 'El campo "empresa" debe ser una cadena de texto.',
@@ -66,7 +72,6 @@ class SupplierRequest extends FormRequest
 
             'address.required' => 'El campo "dirección" es obligatorio.',
 
-            'type_supplier_id.required' => 'El campo "tipo de proveedor" es obligatorio.',
         ];
     }
 }
