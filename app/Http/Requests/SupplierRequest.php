@@ -30,7 +30,6 @@ class SupplierRequest extends FormRequest
             'telephone' => ['required', 'string', 'min:14', Rule::unique('suppliers')->ignore($this->supplier)],
             'email' => ['required', 'string', 'email', 'max:255', 'min:6', Rule::unique('suppliers')->ignore($this->supplier)],
             'address' => 'required',
-            'type_supplier_id' => 'required',
         ];
     }
 

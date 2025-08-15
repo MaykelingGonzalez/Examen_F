@@ -15,9 +15,22 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="company">Compañía</label>
+                <label class="form-control-label" for="supplier_type">Tipo de proveedor</label>
+                <select name="supplier_type" id="supplier_type" class="form-control form-control-alternative">
+                    <option value="" disabled selected>Seleccione el tipo de proveedor</option>
+                    <option value="Mayorista" {{ old('supplier_type', $suppliers->supplier_type) == 'Mayorista' ? 'selected' : '' }}>Mayorista</option>
+                    <option value="Minorista" {{ old('supplier_type', $suppliers->supplier_type) == 'Minorista' ? 'selected' : '' }}>Minorista</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="form-control-label" for="company">Empresa</label>
                 <input type="text" id="company" name="company" class="form-control form-control-alternative"
-                placeholder="Ingresar compañía del proveedor"
+                placeholder="Ingresar empresa del proveedor"
                 value="{{ old('company', $suppliers->company) }}">
             </div>
         </div>
@@ -66,24 +79,6 @@
             </div>
         </div>
     </div>
-
-    <div class="col-lg-6">
-        <div class="form-group">
-            <label  for="type_supplier_id">
-                <i class="fas fa-user-graduate"> Tipo de proveedor</i> 
-            </label>
-            <select name="type_supplier_id" id="type_supplier_id" class="form-control form-control-alternative">
-                <option disabled selected>Seleccionar un Tipo de Proveedor</option>
-                @foreach ($typeSuppliers as $typeSupplier)
-                <option value="{{ $typeSupplier->id }}"
-                    {{ old('type_supplier_id', $supplier->type_supplier_id ?? '') == $typeSupplier->id ? 'selected' : ''}}>
-                    {{ $typeSupplier->type}}
-                </option>
-                @endforeach
-            </select>
-        </div>
-    </div>
-</div>
 
 <hr class="my-4"/>
 

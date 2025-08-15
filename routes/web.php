@@ -3,7 +3,6 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SupplierController;
-use App\Http\Controllers\TypeSupplierController;
 use App\Exports\SuppliersExport;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -27,7 +26,6 @@ Route::middleware('auth')->group(function () {
     });
 
     Route::resource('/suppliers', SupplierController::class);
-    Route::resource('/type_suppliers', TypeSupplierController::class);
     Route::get('/suppliers/export/excel', function () {
         return Excel::download(new SuppliersExport, 'ReporteProveedores.xlsx');
     })->name('suppliers.export.excel');

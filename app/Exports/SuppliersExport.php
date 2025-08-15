@@ -15,12 +15,12 @@ class SuppliersExport implements FromCollection, WithHeadings
     {
         return Supplier::select([
             'supplier_code',
+            'supplier_type',
             'company',
             'representative',
             'telephone',
             'email',
             'address',
-            'type_supplier_id'
         ])->get();
     }
 
@@ -28,12 +28,12 @@ class SuppliersExport implements FromCollection, WithHeadings
     {
         return [
             'Código de Proveedor',
-            'Compañía',
-            'Representante',
+            'Tipo de Proveedor',
+            'Empresa',
+            'Nombre del representante',
             'Teléfono',
             'Email',
             'Dirección',
-            'Tipo de Proveedor'
         ];
     }
 }

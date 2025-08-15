@@ -31,11 +31,24 @@
                         </div>
                     </div>
 
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="form-group">
+                            <label class="form-control-label" for="supplier_type">Tipo de proveedor</label>
+                            <select name="supplier_type" id="supplier_type" class = "form-control">
+                                <option value="" disabled selected>Seleccione el tipo de proveedor</option>
+                                <option value="Mayorista" {{old('supplier_type', $supplier->supplier_type ?? '') == 'Mayorista' ? 'selected' : ''}}>Mayorista</option>
+                                <option value="Minorista" {{old('supplier_type', $supplier->supplier_type ?? '') == 'Minorista' ? 'selected' : ''}}>Minorista</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>    
+
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="company">
-                                    <i class="fas fa-barcode"> Compañía</i> 
+                                    <i class="fas fa-barcode"> Empresa</i> 
                                 </label>
                                 <p>{{ $supplier->company }}</p>
                             </div>
@@ -82,17 +95,6 @@
                                     <i class="fas fa-map"> Dirección</i> 
                                 </label>
                                 <p>{{ $supplier->address }}</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label for="form-control-label" for="type_supplier_id">
-                                    <i class="fas fa-file"> Tipo de proveedor</i>
-                                </label>
-                                <p>{{ $supplier->type_supplier->type }}</p>
                             </div>
                         </div>
                     </div>

@@ -25,7 +25,7 @@ class SupplierController extends Controller
     public function create()
     {
         $suppliers = new Supplier();
-        return view('suppliers.create', compact('supplier'));
+        return view('suppliers.create', compact('suppliers'));
     }
 
     /**

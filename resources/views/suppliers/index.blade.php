@@ -27,12 +27,12 @@
                             <tr>
 
                                 <th scope="col"><b class="fas fa-barcode"> Código del proveedor</b></th>
+                                <th scope="col"><b class="fas fa-user"> Tipo de proveedor</b></th>    
                                 <th scope="col"><b class="fas fa-building"> Empresa</b></th>
                                 <th scope="col"><b class="fas fa-user"> Representante</b></th>
                                 <th scope="col"><b class="fas fa-phone"> Número de teléfono</b></th>
                                 <th scope="col"><b class="fas fa-envelope"></b> Correo electrónico</th>
-                                <th scope="col"><b class="fas fa-map-pin"> Dirección</b></th>  
-                                <th scope="col"><b class="fas fa-user"> Tipo de proveedor</b></th>                                                           
+                                <th scope="col"><b class="fas fa-map-pin"> Dirección</b></th>                                                                                         
                                 <th scope="col"><b class="fas fa-bars"> Acciones</b></th>
                             </tr>
                         </thead>
@@ -40,12 +40,12 @@
                             @foreach ($suppliers as $supplier)
                             <tr>
                                 <td> {{$supplier->supplier_code}}</td>
+                                <td> {{$supplier->supplier_type}}</td>
                                 <td> {{$supplier->company}}</td>
                                 <td> {{$supplier->representative}}</td>
                                 <td> {{$supplier->telephone}}</td>
                                 <td> {{$supplier->email}}</td>
                                 <td> {{$supplier->address}}</td>
-                                <td>{{ $supplier->type_supplier->type }}</td>
 
                                 <td style="white-space: nowrap; display: flex; align-items: center;">
                                     <a href="{{ route('suppliers.show', $supplier->id) }}" class="btn btn-primary btn-sm" style="margin-right: 5px;">
