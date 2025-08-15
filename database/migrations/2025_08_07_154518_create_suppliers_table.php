@@ -14,14 +14,13 @@ return new class extends Migration
         Schema::create('suppliers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('supplier_code', 20)->unique();
+            $table->string('supplier_type', 20);
             $table->string('company');
             $table->string('representative');
             $table->string('telephone', 14)->unique();
             $table->string('email', 255)->unique();
             $table->text('address');
 
-            $table->integer('type_supplier_id')->unsigned();
-            $table->foreign('type_supplier_id')->references('id')->on('type_suppliers')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

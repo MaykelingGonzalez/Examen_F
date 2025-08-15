@@ -13,18 +13,13 @@ class Supplier extends Model
 
     protected $fillable = [
         'supplier_code',
+        'supplier_type',
         'company',
         'representative',
         'telephone',
         'email',
-        'address',
-        'type_supplier_id'
+        'address'
     ];
-
-    public function type_supplier()
-    {
-        return $this->belongsTo(TypeSupplier::class);
-    }
 
     public function products()
     {
