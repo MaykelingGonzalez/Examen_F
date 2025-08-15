@@ -12,7 +12,9 @@ class TypeMovement extends Model
     protected $perPage = 10;
 
     protected $fillable = [
-        'type_movement'
+        'type_movement_code',
+        'type_movement',
+        'description'
     ];
 
     public function movements()

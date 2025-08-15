@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('type_movements', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('type_movement_code', 20)->unique();
             $table->string('type_movement', 20);
+            $table->text('description');
             $table->timestamps();
         });
     }
