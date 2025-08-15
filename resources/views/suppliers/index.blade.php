@@ -26,13 +26,13 @@
                         <thead class="thead-ligth">
                             <tr>
 
-                                <th scope="col"><b class="fas fa-user"> Código del proveedor</b></th>
-                                <th scope="col"><b class="fas fa-barcode"> Compañia</b></th>
-                                <th scope="col"><b class="fas fa-id-card"> Nombre del representante</b></th>
-                                <th scope="col"><b class="fas fa-calendar"> Número de teléfono</b></th>
-                                <th scope="col"><b class="fas fa-calendar"></b> Correo electrónico</th>
-                                <th scope="col"><b class="fas fa-map"> Dirección</b></th>  
-                                <th scope="col"><b class="fas fa-file"> Tipo de proveedor</b></th>                                                           
+                                <th scope="col"><b class="fas fa-barcode"> Código del proveedor</b></th>
+                                <th scope="col"><b class="fas fa-building"> Empresa</b></th>
+                                <th scope="col"><b class="fas fa-user"> Representante</b></th>
+                                <th scope="col"><b class="fas fa-phone"> Número de teléfono</b></th>
+                                <th scope="col"><b class="fas fa-envelope"></b> Correo electrónico</th>
+                                <th scope="col"><b class="fas fa-map-pin"> Dirección</b></th>  
+                                <th scope="col"><b class="fas fa-user"> Tipo de proveedor</b></th>                                                           
                                 <th scope="col"><b class="fas fa-bars"> Acciones</b></th>
                             </tr>
                         </thead>

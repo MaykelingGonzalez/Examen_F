@@ -17,7 +17,7 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-ligth">
                             <tr>
-                                <th scope="col"><b class="fas fa-graduation-cap"> Tipo de proveedor</b></th>                              
+                                <th scope="col"><b class="fas fa-user"> Tipo de proveedor</b></th>                              
                                 <th scope="col"><b class="fas fa-bars"> Acciones</b></th>
                             </tr>
                         </thead>
