@@ -12,11 +12,11 @@
                         <div class="btn-group mt-2 mt-md-0" role="group" aria-label="Botones de acción">
 
                         <a href="{{ route('suppliers.export.excel') }}" class="btn btn-success">
-                            <i class="fas fa-file-excel"> Exportar a Excel</i>
+                            <i class="fas fa-file-excel"></i> Exportar a Excel
                         </a>    
 
                         <a href="{{ route('suppliers.create') }}" class="btn btn-primary">
-                            <i class="fas fa-plus"> Nuevo Proveedor</i>
+                            <i class="fas fa-plus"></i> Nuevo Proveedor
                         </a>
                     </div>
                 </div>
@@ -26,14 +26,14 @@
                         <thead class="thead-ligth">
                             <tr>
 
-                                <th scope="col"><b class="fas fa-barcode"> Código del proveedor</b></th>
-                                <th scope="col"><b class="fas fa-user"> Tipo de proveedor</b></th>    
-                                <th scope="col"><b class="fas fa-building"> Empresa</b></th>
-                                <th scope="col"><b class="fas fa-user"> Representante</b></th>
-                                <th scope="col"><b class="fas fa-phone"> Número de teléfono</b></th>
-                                <th scope="col"><b class="fas fa-envelope"></b> Correo electrónico</th>
-                                <th scope="col"><b class="fas fa-map-pin"> Dirección</b></th>                                                                                         
-                                <th scope="col"><b class="fas fa-bars"> Acciones</b></th>
+                                <th scope="col"><i class="fas fa-barcode"></i><b> Código del proveedor</b></th>
+                                <th scope="col"><i class="fas fa-user"></i><b> Tipo de proveedor</b></th>    
+                                <th scope="col"><i class="fas fa-building"></i><b> Empresa</b></th>
+                                <th scope="col"><i class="fas fa-user"></i><b> Representante</b></th>
+                                <th scope="col"><i class="fas fa-phone"></i><b> Número de teléfono</b></th>
+                                <th scope="col"><i class="fas fa-envelope"></i><b> Correo electrónico</b></th>
+                                <th scope="col"><i class="fas fa-map-pin"></i><b> Dirección</b></th>
+                                <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -49,11 +49,11 @@
 
                                 <td style="white-space: nowrap; display: flex; align-items: center;">
                                     <a href="{{ route('suppliers.show', $supplier->id) }}" class="btn btn-primary btn-sm" style="margin-right: 5px;">
-                                        <i class="fas fa-eye"> Mostrar</i> 
+                                        <i class="fas fa-eye"></i><b>Mostrar</b>
                                     </a>
                                     
                                     <a href="{{ route('suppliers.edit', $supplier->id) }}" class="btn btn-info btn-sm" style="margin-right: 5px;">
-                                        <i class="fas fa-edit"> Editar</i>
+                                        <i class="fas fa-edit"></i><b>Editar</b>
                                     </a>
 
                                     <form action="{{ route('suppliers.destroy', $supplier->id) }}" method="POST"
@@ -62,7 +62,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm">
-                                            <i class="fas fa-trash"> Eliminar</i>
+                                            <i class="fas fa-trash"></i><b>Eliminar</b>
                                         </button>
                                     </form>
                                 </td>
