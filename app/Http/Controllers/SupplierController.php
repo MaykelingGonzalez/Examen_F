@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Supplier;  
 use App\Http\Requests\SupplierRequest;
-use App\Models\TypeSupplier;
 use App\Exports\SuppliersExport;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -26,8 +25,7 @@ class SupplierController extends Controller
     public function create()
     {
         $suppliers = new Supplier();
-        $typeSuppliers = TypeSupplier::all();
-        return view('suppliers.create', compact('suppliers', 'typeSuppliers'));
+        return view('suppliers.create', compact('supplier'));
     }
 
     /**
@@ -44,9 +42,8 @@ class SupplierController extends Controller
      */
     public function show(int $id)
     {
-        $suppliers = new Supplier();
-        $typeSuppliers = TypeSupplier::all();
-        return view('suppliers.show', compact('suppliers', 'typeSuppliers'));
+        $suppliers = Supplier::find($id);
+        return view('suppliers.show', compact('suppliers'));
     }
 
     /**
@@ -55,8 +52,7 @@ class SupplierController extends Controller
     public function edit(int $id)
     {
         $suppliers = Supplier::find($id);
-        $typeSuppliers = TypeSupplier::all();
-        return view('suppliers.edit', compact('suppliers', 'typeSuppliers'));
+        return view('suppliers.edit', compact('suppliers'));
     }
 
     /**
