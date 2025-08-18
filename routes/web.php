@@ -3,6 +3,8 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\TypeMovementController;
+use App\Http\Controllers\MeasureUnitController;
 use App\Exports\SuppliersExport;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -29,6 +31,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/suppliers/export/excel', function () {
         return Excel::download(new SuppliersExport, 'ReporteProveedores.xlsx');
     })->name('suppliers.export.excel');
+
+    Route::resource('/type_movements', TypeMovementController::class);
+
+    Route::resource('/measure_units', MeasureUnitController::class);
 
 });
 
