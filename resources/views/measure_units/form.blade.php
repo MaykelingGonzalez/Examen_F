@@ -1,15 +1,15 @@
  <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="measure_unit"><i class="fas fa-weight-hanging"></i><b> Unidad de medida</b></label>
-                <select name="measure_unit" id="measure_unit" class="form-control form-control-alternative">
+                <label class="form-control-label" for="name"><i class="fas fa-weight-hanging"></i><b> Unidad de medida</b></label>
+                <select name="name" id="name" class="form-control form-control-alternative">
                     <option value="" disabled selected>Seleccione la unidad de medida</option>
-                    <option value="Metro" {{ old('measure_unit', $measureUnits->measure_unit) == 'Metro' ? 'selected' : '' }}>Metro</option>
-                    <option value="Kilogramo" {{ old('measure_unit', $measureUnits->measure_unit) == 'Kilogramo' ? 'selected' : '' }}>Kilogramo</option>
-                    <option value="Metro cuadrado" {{ old('measure_unit', $measureUnits->measure_unit) == 'Metro cuadrado' ? 'selected' : '' }}>Metro cuadrado</option>
-                    <option value="Metro cúbico" {{ old('measure_unit', $measureUnits->measure_unit) == 'Metro cúbico' ? 'selected' : '' }}>Metro cúbico</option>
-                    <option value="Libra" {{ old('measure_unit', $measureUnits->measure_unit) == 'Libra' ? 'selected' : '' }}>Libra</option>
-                    <option value="Unidad" {{ old('measure_unit', $measureUnits->measure_unit) == 'Unidad' ? 'selected' : '' }}>Unidad</option>
+                    <option value="Metro" {{ old('name', $measureUnits->name) == 'Metro' ? 'selected' : '' }}>Metro</option>
+                    <option value="Kilogramo" {{ old('name', $measureUnits->name) == 'Kilogramo' ? 'selected' : '' }}>Kilogramo</option>
+                    <option value="Metro cuadrado" {{ old('name', $measureUnits->name) == 'Metro cuadrado' ? 'selected' : '' }}>Metro cuadrado</option>
+                    <option value="Metro cúbico" {{ old('name', $measureUnits->name) == 'Metro cúbico' ? 'selected' : '' }}>Metro cúbico</option>
+                    <option value="Libra" {{ old('name', $measureUnits->name) == 'Libra' ? 'selected' : '' }}>Libra</option>
+                    <option value="Unidad" {{ old('name', $measureUnits->name) == 'Unidad' ? 'selected' : '' }}>Unidad</option>
                 </select>
             </div>
         </div>

@@ -23,10 +23,10 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
-                                <label for="form-control-label" for="supplier_code">
+                                <label for="form-control-label" for="name">
                                     <i class="fas fa-ruler"></i><b> Unidad de medida</b> 
                                 </label>
-                                <p>{{ $measureUnits->measure_unit }}</p>
+                                <p>{{ $measureUnits->name }}</p>
                             </div>
                         </div>
                     </div>

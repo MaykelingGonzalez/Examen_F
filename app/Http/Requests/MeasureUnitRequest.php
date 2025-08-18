@@ -24,7 +24,7 @@ class MeasureUnitRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'measure_unit' => 'required|string|min:1|max:255',
+            'name' => 'required|string|min:1|max:255',
             'symbol' => 'required|string|min:1|max:3',
         ];
     }
@@ -32,10 +32,10 @@ class MeasureUnitRequest extends FormRequest
     public function messages()
     {
         return [
-            'measure_unit.required' => 'El campo "unidad de medida" es obligatorio.',
-            'measure_unit.string' => 'El campo "unidad de medida" debe ser una cadena de texto.',
-            'measure_unit.max' => 'El campo "unidad de medida" no puede tener más de 255 caracteres.',
-            'measure_unit.min' => 'El campo "unidad de medida" debe tener al menos 1 carácter.',
+            'name.required' => 'El campo "unidad de medida" es obligatorio.',
+            'name.string' => 'El campo "unidad de medida" debe ser una cadena de texto.',
+            'name.max' => 'El campo "unidad de medida" no puede tener más de 255 caracteres.',
+            'name.min' => 'El campo "unidad de medida" debe tener al menos 1 carácter.',
 
             'symbol.required' => 'El campo "símbolo" es obligatorio.',
             'symbol.string' => 'El campo "símbolo" debe ser una cadena de texto.',

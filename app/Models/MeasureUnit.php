@@ -12,7 +12,7 @@ class MeasureUnit extends Model
     protected $perPage = 10;
 
     protected $fillable = [
-        'measure_unit',
+        'name',
         'symbol'
     ];
 

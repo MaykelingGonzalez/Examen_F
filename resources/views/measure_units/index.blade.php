@@ -29,7 +29,7 @@
                         <tbody>
                             @foreach ($measureUnits as $measureUnit)
                             <tr>
-                                <td> {{$measureUnit->measure_unit}}</td>
+                                <td> {{$measureUnit->name}}</td>
                                 <td> {{$measureUnit->symbol}}</td>
 
                                 <td style="white-space: nowrap; display: flex; align-items: center;">
