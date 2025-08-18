@@ -12,7 +12,7 @@ class Category extends Model
     protected $perPage = 10;
 
     protected $fillable = [
-        'category',
+        'name',
         'description'
     ];
 

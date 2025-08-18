@@ -6,6 +6,7 @@ use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\TypeMovementController;
 use App\Http\Controllers\MeasureUnitController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 use App\Exports\SuppliersExport;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -38,6 +39,7 @@ Route::middleware('auth')->group(function () {
     Route::resource('/measure_units', MeasureUnitController::class);
 
     Route::resource('/categories', CategoryController::class);
+
 
 });
 

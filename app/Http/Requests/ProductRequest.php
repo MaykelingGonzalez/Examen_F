@@ -28,7 +28,7 @@ class ProductRequest extends FormRequest
             'price'=> 'required|string|min:1|max:20',
             'description'=> 'required|max:500',
             'category_id' => 'required',
-            'measureUnit' => 'required',
+            'measureUnit_id' => 'required',
             'supplier_id' => 'required',
         ];
     }
@@ -57,7 +57,7 @@ class ProductRequest extends FormRequest
 
             'category_id.required' => 'La "categoría" es obligatoria.',
 
-            'measureUnit.required' => 'La "unidad de medida" es obligatoria.',
+            'measureUnit_id.required' => 'La "unidad de medida" es obligatoria.',
 
             'supplier_id.required' => 'El "proveedor" es obligatorio.',
         ];

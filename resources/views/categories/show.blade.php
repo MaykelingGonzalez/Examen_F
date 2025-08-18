@@ -26,7 +26,7 @@
                                 <label for="form-control-label" for="supplier_code">
                                     <i class="fas fa-tags"></i><b> Categoría</b> 
                                 </label>
-                                <p>{{ $categories->category }}</p>
+                                <p>{{ $categories->name }}</p>
                             </div>
                         </div>
                     </div>

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;  
 use App\Http\Requests\ProductRequest;
+use App\Models\Category;
+use App\Models\MeasureUnit;
+use App\Models\Supplier;
 
 class ProductController extends Controller
 {
@@ -13,7 +16,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $products = Product::latest()->paginate(10);
+        $products = Product::with('category', 'measureUnit', 'supplier')->paginate(10);
         return view('products.index', compact('products'));
     }
 
@@ -23,7 +26,10 @@ class ProductController extends Controller
     public function create()
     {
         $products = new Product();
-        return view('products.create', compact('products'));
+        $categories = Category::all();
+        $measureUnits = MeasureUnit::all();
+        $suppliers = Supplier::all();
+        return view('products.create', compact('products', 'categories', 'measureUnits', 'suppliers'));
     }
 
     /**
@@ -32,7 +38,7 @@ class ProductController extends Controller
     public function store(ProductRequest $request)
     {
         Product::create($request->validated());
-        return redirect()->route('products.index')->with('success', 'Producto creado exitosamente.');
+        return redirect()->route('products.index')->with('success', 'Producto creado con éxito.');
     }
 
     /**
@@ -41,7 +47,10 @@ class ProductController extends Controller
     public function show(int $id)
     {
         $products = Product::find($id);
-        return view('products.show', compact('products'));
+        $categories = Category::all();
+        $measureUnits = MeasureUnit::all();
+        $suppliers = Supplier::all();
+        return view('products.show', compact('products', 'categories', 'measureUnits', 'suppliers'));
     }
 
     /**
@@ -50,7 +59,10 @@ class ProductController extends Controller
     public function edit(int $id)
     {
         $products = Product::find($id);
-        return view('products.edit', compact('products'));
+        $categories = Category::all();
+        $measureUnits = MeasureUnit::all();
+        $suppliers = Supplier::all();
+        return view('products.edit', compact('products', 'categories', 'measureUnits', 'suppliers'));
     }
 
     /**

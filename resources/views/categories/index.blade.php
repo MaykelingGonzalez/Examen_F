@@ -29,7 +29,7 @@
                         <tbody>
                             @foreach ($categories as $category)
                             <tr>
-                                <td> {{$category->category}}</td>
+                                <td> {{$category->name}}</td>
                                 <td> {{$category->description}}</td>
 
                                 <td style="white-space: nowrap; display: flex; align-items: center;">
