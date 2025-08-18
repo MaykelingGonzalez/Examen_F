@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SupplierController;
 use App\Http\Controllers\TypeMovementController;
 use App\Http\Controllers\MeasureUnitController;
+use App\Http\Controllers\CategoryController;
 use App\Exports\SuppliersExport;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -35,6 +36,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('/type_movements', TypeMovementController::class);
 
     Route::resource('/measure_units', MeasureUnitController::class);
+
+    Route::resource('/categories', CategoryController::class);
 
 });
 
