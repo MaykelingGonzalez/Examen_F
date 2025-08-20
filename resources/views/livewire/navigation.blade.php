@@ -92,6 +92,12 @@
             </a>
         </li>
 
+        <li class="nav-item {{ Request::route()->named('products.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('products.index') ? 'active' : '' }}"
+                href="{{ route('products.index') }}" wire:navigate>
+                <i class="fas fa-box" style="color: #666cd9;"></i> Productos
+            </a>
+        </li>
 
     </ul>
 </div>
