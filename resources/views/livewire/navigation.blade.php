@@ -99,5 +99,11 @@
             </a>
         </li>
 
+        <li class="nav-item {{ Request::route()->named('movements.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('movements.index') ? 'active' : '' }}"
+                href="{{ route('movements.index') }}" wire:navigate>
+                <i class="fas fa-exchange-alt" style="color: #666cd9;"></i> Movimientos
+            </a>
+
     </ul>
 </div>

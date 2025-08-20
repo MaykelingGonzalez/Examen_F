@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="product_code">Código de producto</label>
+                <label class="form-control-label" for="product_code"> Código de producto</label>
                 <input type="text" id="product_code" name="product_code" class="form-control form-control-alternative"
                 placeholder="Ingresar código de producto"
                 value="{{ old('product_code', $products->product_code) }}"> 
@@ -13,9 +13,9 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="name">Producto</label>
+                <label class="form-control-label" for="name"> Producto</label>
                 <input type="text" id="name" name="name" class="form-control form-control-alternative"
-                placeholder="Ingresar nombre del producto"
+                placeholder="Ingresar nombre de producto"
                 value="{{ old('name', $products->name) }}"> 
             </div>
         </div>
@@ -24,9 +24,9 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="price">Precio</label>
+                <label class="form-control-label" for="price"> Precio</label>
                 <input type="text" id="price" name="price" class="form-control form-control-alternative"
-                placeholder="Ingresar precio del producto"
+                placeholder="Ingresar precio de producto"
                 value="{{ old('price', $products->price) }}"> 
             </div>
         </div>
@@ -35,9 +35,9 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="description">Descripción</label>
+                <label class="form-control-label" for="description"> Descripción</label>
                 <input type="text" id="description" name="description" class="form-control form-control-alternative"
-                placeholder="Ingresar descripción del producto"
+                placeholder="Ingresar descripción de producto"
                 value="{{ old('description', $products->description) }}"> 
             </div>
         </div>
@@ -49,10 +49,10 @@
                 <i class="fas fa-user-graduate"> Categoría</i> 
             </label>
             <select name="category_id" id="category_id" class="form-control form-control-alternative">
-                <option disabled selected>Seleccionar una categoría</option>
+                <option disabled selected>Seleccionar una Categoría</option>
                 @foreach ($categories as $category)
                 <option value="{{ $category->id }}"
-                    {{ old('category_id', $products->category_id ?? '') == $category->id ? 'selected' : ''}}>
+                    {{ old('category_id', $product->category_id ?? '') == $category->id ? 'selected' : ''}}>
                     {{ $category->name }}
                 </option>
                 @endforeach
@@ -66,16 +66,33 @@
                 <i class="fas fa-user-graduate"> Unidad de medida</i> 
             </label>
             <select name="measureUnit_id" id="measureUnit_id" class="form-control form-control-alternative">
-                <option disabled selected>Seleccionar una unidad de medida</option>
+                <option disabled selected>Seleccionar una Unidad de medida</option>
                 @foreach ($measureUnits as $measureUnit)
                 <option value="{{ $measureUnit->id }}"
-                    {{ old('measureUnit_id', $products->measureUnit_id ?? '') == $measureUnit->id ? 'selected' : ''}}>
-                    {{ $measureUnit->name }}
+                    {{ old('measureUnit_id', $product->measureUnit_id ?? '') == $measureUnit->id ? 'selected' : ''}}>
+                    {{ $measureUnit->symbol }}
                 </option>
                 @endforeach
             </select>
         </div>
-    </div>             
+    </div>
+    
+    <div class="col-lg-6">
+        <div class="form-group">
+            <label  for="supplier_id">
+                <i class="fas fa-user-graduate"> Proveedor</i> 
+            </label>
+            <select name="supplier_id" id="supplier_id" class="form-control form-control-alternative">
+                <option disabled selected>Seleccionar un proveedor</option>
+                @foreach ($suppliers as $supplier)
+                <option value="{{ $supplier->id }}"
+                    {{ old('supplier_id', $product->supplier_id ?? '') == $supplier->id ? 'selected' : ''}}>
+                    {{ $supplier->company }}
+                </option>
+                @endforeach
+            </select>
+        </div>
+    </div>
 </div>
 
 
@@ -92,3 +109,4 @@
 </div>
 
     
+

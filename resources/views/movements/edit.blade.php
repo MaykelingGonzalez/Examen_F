@@ -1,6 +1,6 @@
 @extends('layouts.panel')
 
-@section('title', 'Productos/Crear')
+@section('title', 'Movimientos/Actualizar')
 
 @section('content')
 
@@ -9,10 +9,10 @@
             <div class="card-header bg-white border-0">
                 <div class="row align-items-center">
                     <div class="col-8">
-                        <h3 class="mb-0"><i class="fas fa-plus-circle"> Registrar Producto</i></h3>
+                        <h3 class="mb-0"><i class="fas fa-plus-circle"> Actualizar movimiento</i></h3>
                     </div>
                     <div class="col-4 text-right">
-                        <a href="{{ route('products.index') }}" class="btn btn-sm btn-primary">
+                        <a href="{{ route('movements.index') }}" class="btn btn-sm btn-primary">
                             <i class="fas fa-arrow-left"> Volver</i>
                         </a>
                     </div>
@@ -20,11 +20,14 @@
             </div>
 
             <div class="card-body container-fluid">
-                <form action="{{ route('products.store') }}" method="POST">
-                    @csrf
-                    @include('products.form')
+                <form action="{{ route('movements.update', $movement->id) }}" method='POST'>
+                    @csrf 
+                    @method('PUT')
+                    @include('movements.form')
                 </form>
             </div>
         </div>
     </div>
-@endsection
+    @endsection
+
+

@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Movement;  
 use App\Http\Requests\MovementRequest;
+use App\Models\TypeMovement;
+use App\Models\Product;
+use App\Models\User;
 
 class MovementController extends Controller
 {
@@ -13,7 +16,7 @@ class MovementController extends Controller
      */
     public function index()
     {
-        $movements = Movement::latest()->paginate(10);
+        $movements = Movement::with('type_movement', 'product', 'user')->paginate(10);
         return view('movements.index', compact('movements'));
     }
 
@@ -22,8 +25,11 @@ class MovementController extends Controller
      */
     public function create()
     {
-        $movements = new Movement();
-        return view('movements.create', compact('movements'));
+        $movements = Movement();
+        $type_movements = TypeMovement::all();
+        $products = Product::all();
+        $users = User::all();
+        return view('movements.create', compact('movements', 'type_movements', 'products', 'users'));
     }
 
     /**
@@ -40,8 +46,11 @@ class MovementController extends Controller
      */
     public function show(int $id)
     {
-        $movements = Movement::find($id);
-        return view('movements.show', compact('movements'));
+        $movements = Movement();
+        $type_movements = TypeMovement::all();
+        $products = Product::all();
+        $users = User::all();
+        return view('movements.create', compact('movements', 'type_movements', 'products', 'users'));
     }
 
     /**
@@ -49,8 +58,11 @@ class MovementController extends Controller
      */
     public function edit(int $id)
     {
-        $movements = Movement::find($id);
-        return view('movements.edit', compact('movements'));
+        $movements = Movement();
+        $type_movements = TypeMovement::all();
+        $products = Product::all();
+        $users = User::all();
+        return view('movements.create', compact('movements', 'type_movements', 'products', 'users'));
     }
 
     /**
