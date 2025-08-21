@@ -28,7 +28,7 @@ class Product extends Model
 
     public function measureUnit()
     {
-        return $this->belongsTo(MeasureUnit::class);
+        return $this->belongsTo(MeasureUnit::class, 'measureUnit_id');
     }
 
     public function supplier()
