@@ -104,6 +104,14 @@
                 href="{{ route('movements.index') }}" wire:navigate>
                 <i class="fas fa-exchange-alt" style="color: #666cd9;"></i> Movimientos
             </a>
+        </li>
+
+        <li class="nav-item {{ Request::route()->named('responsibles.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('responsibles.index') ? 'active' : '' }}"
+                href="{{ route('responsibles.index') }}" wire:navigate>
+                <i class="fas fa-user" style="color: #666cd9;"></i> Responsables
+            </a>
+        </li>
 
     </ul>
 </div>
