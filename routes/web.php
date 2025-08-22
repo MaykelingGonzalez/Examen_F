@@ -8,6 +8,7 @@ use App\Http\Controllers\MeasureUnitController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Exports\SuppliersExport;
+use App\Exports\ProductsExport;
 use Maatwebsite\Excel\Facades\Excel;
 
 
@@ -41,6 +42,10 @@ Route::middleware('auth')->group(function () {
     Route::resource('/categories', CategoryController::class);
 
     Route::resource('/products', ProductController::class);
+    Route::get('/products/export/excel', function () {
+        return Excel::download(new ProductsExport, 'ReporteProductos.xlsx');
+    })->name('products.export.excel');
+
 
     Route::resource('/movements', MovementController::class);
 

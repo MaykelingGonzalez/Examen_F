@@ -8,6 +8,7 @@ use App\Http\Requests\ProductRequest;
 use App\Models\Category;
 use App\Models\MeasureUnit;
 use App\Models\Supplier;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ProductController extends Controller
 {
@@ -83,5 +84,10 @@ class ProductController extends Controller
         $products = Product::find($id);
         $products->delete();
         return redirect()->route('products.index')->with('deleted', 'Producto eliminado exitosamente.');
+    }
+
+    public function export()
+    {
+        return Excel::download(new ProductsExport, 'ReporteProductos.xlsx');
     }
 }
