@@ -27,8 +27,7 @@ class Responsible extends Model
         'municipality',
         'address',
         'marital_status',
-        'academic_level',
-        'warehouse_id'
+        'academic_level'
     ];
 
     public function warehouse()

@@ -8,6 +8,7 @@ use App\Http\Controllers\MeasureUnitController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MovementController;
+use App\Http\Controllers\ResponsibleController;
 use App\Exports\SuppliersExport;
 use App\Exports\ProductsExport;
 use Maatwebsite\Excel\Facades\Excel;
@@ -47,8 +48,9 @@ Route::middleware('auth')->group(function () {
         return Excel::download(new ProductsExport, 'ReporteProductos.xlsx');
     })->name('products.export.excel');
 
-
     Route::resource('/movements', MovementController::class);
+
+    Route::resource('/responsibles', ResponsibleController::class);
 
 });
 
