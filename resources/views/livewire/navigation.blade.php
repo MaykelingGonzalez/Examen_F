@@ -120,5 +120,12 @@
             </a>
         </li>
 
+        <li class="nav-item {{ Request::route()->named('inventories.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('inventories.index') ? 'active' : '' }}"
+                href="{{ route('inventories.index') }}" wire:navigate>
+                <i class="fas fa-warehouse" style="color: #666cd9;"></i> Inventarios
+            </a>
+        </li>
+
     </ul>
 </div>
