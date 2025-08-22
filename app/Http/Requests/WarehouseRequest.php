@@ -3,7 +3,7 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Validation\Rule;
 
 class WarehouseRequest extends FormRequest
 {

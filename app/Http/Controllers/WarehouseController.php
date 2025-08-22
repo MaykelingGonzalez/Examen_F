@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Warehouse;  
+use App\Models\Responsible;
 use App\Http\Requests\WarehouseRequest;
 
 class WarehouseController extends Controller
@@ -13,7 +14,7 @@ class WarehouseController extends Controller
      */
     public function index()
     {
-        $warehouses = Warehouse::latest()->paginate(10);
+        $warehouses = Warehouse::with('responsible')->paginate(10);
         return view('warehouses.index', compact('warehouses'));
     }
 
@@ -23,7 +24,8 @@ class WarehouseController extends Controller
     public function create()
     {
         $warehouses = new Warehouse();
-        return view('warehouses.create', compact('warehouses'));
+        $responsibles = Responsible::all();
+        return view('warehouses.create', compact('warehouses', 'responsibles'));
     }
 
     /**
@@ -40,8 +42,9 @@ class WarehouseController extends Controller
      */
     public function show(int $id)
     {
-        $warehouses = Warehouse::find($id);
-        return view('warehouses.show', compact('warehouses'));
+       $warehouses = Warehouse::find($id);
+        $responsibles = Responsible::all();
+        return view('warehouses.show', compact('warehouses', 'responsibles'));
     }
 
     /**
@@ -50,7 +53,8 @@ class WarehouseController extends Controller
     public function edit(int $id)
     {
         $warehouses = Warehouse::find($id);
-        return view('warehouses.edit', compact('warehouses'));
+        $responsibles = Responsible::all();
+        return view('warehouses.edit', compact('warehouses', 'responsibles'));
     }
 
     /**
