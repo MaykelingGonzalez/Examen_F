@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Inventory;  
+use App\Models\Product;
+use App\Models\Warehouse;
 use App\Http\Requests\InventoryRequest;
 
 class InventoryController extends Controller
@@ -13,7 +15,7 @@ class InventoryController extends Controller
      */
     public function index()
     {
-        $inventories = Inventory::latest()->paginate(10);
+        $inventories = Inventory::with('product', 'warehouse')->paginate(10);
         return view('inventories.index', compact('inventories'));
     }
 
@@ -23,7 +25,9 @@ class InventoryController extends Controller
     public function create()
     {
         $inventories = new Inventory();
-        return view('inventories.create', compact('inventories'));
+        $products = Product::all();
+        $warehouses = Warehouse::all();
+        return view('inventories.create', compact('inventories', 'products', 'warehouses'));
     }
 
     /**
@@ -41,7 +45,9 @@ class InventoryController extends Controller
     public function show(int $id)
     {
         $inventories = Inventory::find($id);
-        return view('inventories.show', compact('inventories'));
+        $products = Product::all();
+        $warehouses = Warehouse::all();
+        return view('inventories.show', compact('inventories', 'products', 'warehouses'));
     }
 
     /**
@@ -49,8 +55,10 @@ class InventoryController extends Controller
      */
     public function edit(int $id)
     {
-        $inventories = Inventory::find($id);
-        return view('inventories.edit', compact('inventories'));
+       $inventories = Inventory::find($id);
+        $products = Product::all();
+        $warehouses = Warehouse::all();
+        return view('inventories.edit', compact('inventories', 'products', 'warehouses'));
     }
 
     /**

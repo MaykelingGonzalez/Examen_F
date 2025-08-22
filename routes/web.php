@@ -10,6 +10,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\MovementController;
 use App\Http\Controllers\ResponsibleController;
 use App\Http\Controllers\WarehouseController;
+use App\Http\Controllers\InventoryController;
 use App\Exports\SuppliersExport;
 use App\Exports\ProductsExport;
 use Maatwebsite\Excel\Facades\Excel;
@@ -54,6 +55,8 @@ Route::middleware('auth')->group(function () {
     Route::resource('/responsibles', ResponsibleController::class);
 
     Route::resource('/warehouses', WarehouseController::class);
+
+    Route::resource('/inventories', InventoryController::class);
 
 });
 
