@@ -12,11 +12,11 @@
                         <div class="btn-group mt-2 mt-md-0" role="group" aria-label="Botones de acción">
 
                         <a href="{{ route('products.export.excel') }}" class="btn btn-success">
-                            <i class="fas fa-file-excel"></i> Exportar a Excel
+                            <i class="fas fa-file-excel"></i> <b>Exportar a Excel</b>
                         </a>   
                         
                         <a href="{{ route('products.create') }}" class="btn btn-primary">
-                            <i class="fas fa-plus"> Nuevo producto</i> 
+                            <i class="fas fa-plus"></i> <b>Nuevo producto</b>
                         </a>
                     </div>
                 </div>
@@ -24,14 +24,14 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-ligth">
                             <tr>
-                                <th scope="col"><b class="fas fa-file"> Código de producto</b></th>
-                                <th scope="col"><b class="fas fa-file"> Nombre de producto</b></th>
-                                <th scope="col"><b class="fas fa-file"> Precio</b></th>
-                                <th scope="col"><b class="fas fa-file"> Descripción</b></th>
-                                <th scope="col"><b class="fas fa-user"> Categoría</b></th>
-                                <th scope="col"><b class="fas fa-book"> Unidad de medida</b></th>
-                                <th scope="col"><b class="fas fa-book"> Proveedor</b></th>
-                                <th scope="col"><b class="fas fa-bars"> Acciones</b></th>
+                                <th scope="col"><i class="fas fa-barcode"></i><b> Código del producto</b></th>
+                                <th scope="col"><i class="fas fa-user"></i><b> Producto</b></th>    
+                                <th scope="col"><i class="fas fa-building"></i><b> Precio</b></th>
+                                <th scope="col"><i class="fas fa-user"></i><b> Descripción</b></th>
+                                <th scope="col"><i class="fas fa-phone"></i><b> Categoría</b></th>
+                                <th scope="col"><i class="fas fa-envelope"></i><b> Unidad de medida</b></th>
+                                <th scope="col"><i class="fas fa-map-pin"></i><b> Proveedor</b></th>
+                                <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -46,11 +46,11 @@
                                     <td>{{ $product->supplier->company }}</td>
                                 <td style="white-space: nowrap; display: flex; align-items: center;">
                                     <a href="{{ route('products.show', $product->id) }}" class="btn btn-primary btn-sm" style="margin-right: 5px;">
-                                        <i class="fas fa-eye"> Mostrar</i> 
+                                        <i class="fas fa-eye"> </i><b>Mostrar</b>
                                     </a>
 
                                     <a href="{{ route('products.edit', $product->id) }}" class="btn btn-info btn-sm" style="margin-right: 5px;">
-                                        <i class="fas fa-edit"> Editar</i>
+                                        <i class="fas fa-edit"> </i><b>Editar</b>
                                     </a>
 
                                     <form action="{{ route('products.destroy', $product->id) }}" method="POST"
@@ -59,7 +59,7 @@
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm">
-                                            <i class="fas fa-trash"> Eliminar</i>
+                                            <i class="fas fa-trash"> </i><b>Eliminar</b>
                                         </button>
                                     </form>
                                 </td>

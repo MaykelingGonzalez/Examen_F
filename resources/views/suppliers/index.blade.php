@@ -26,14 +26,14 @@
                         <thead class="thead-ligth">
                             <tr>
 
-                                <th scope="col"><i class="fas fa-barcode"></i><b> Código del proveedor</b></th>
-                                <th scope="col"><i class="fas fa-user"></i><b> Tipo de proveedor</b></th>    
-                                <th scope="col"><i class="fas fa-building"></i><b> Empresa</b></th>
-                                <th scope="col"><i class="fas fa-user"></i><b> Representante</b></th>
-                                <th scope="col"><i class="fas fa-phone"></i><b> Número de teléfono</b></th>
-                                <th scope="col"><i class="fas fa-envelope"></i><b> Correo electrónico</b></th>
-                                <th scope="col"><i class="fas fa-map-pin"></i><b> Dirección</b></th>
-                                <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
+                                <th scope="col"><i class="fas fa-barcode"><i><b> Código del proveedor</b></th>
+                                <th scope="col"><i class="fas fa-user"><i><b> Tipo de proveedor</b></th>    
+                                <th scope="col"><i class="fas fa-building"><i><b> Empresa</b></th>
+                                <th scope="col"><i class="fas fa-user"><i><b> Representante</b></th>
+                                <th scope="col"><i class="fas fa-phone"><i><b> Número de teléfono</b></th>
+                                <th scope="col"><i class="fas fa-envelope"><i><b> Correo electrónico</b></th>
+                                <th scope="col"><i class="fas fa-map-pin"><i><b> Dirección</b></th>
+                                <th scope="col"><i class="fas fa-bars"><i><b> Acciones</b></th>
                             </tr>
                         </thead>
                         <tbody>

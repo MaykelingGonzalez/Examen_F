@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="product_code"> Código de producto</label>
+                <label class="form-control-label" for="product_code"> <b>Código de producto</b></label>
                 <input type="text" id="product_code" name="product_code" class="form-control form-control-alternative"
                 placeholder="Ingresar código de producto"
                 value="{{ old('product_code', $products->product_code) }}"> 
@@ -13,7 +13,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="name"> Producto</label>
+                <label class="form-control-label" for="name"><b> Producto</b></label>
                 <input type="text" id="name" name="name" class="form-control form-control-alternative"
                 placeholder="Ingresar nombre de producto"
                 value="{{ old('name', $products->name) }}"> 
@@ -24,7 +24,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="price"> Precio</label>
+                <label class="form-control-label" for="price"> <b>Precio</b></label>
                 <input type="text" id="price" name="price" class="form-control form-control-alternative"
                 placeholder="Ingresar precio de producto"
                 value="{{ old('price', $products->price) }}"> 
@@ -35,7 +35,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="description"> Descripción</label>
+                <label class="form-control-label" for="description"> <b>Descripción</b></label>
                 <input type="text" id="description" name="description" class="form-control form-control-alternative"
                 placeholder="Ingresar descripción de producto"
                 value="{{ old('description', $products->description) }}"> 
@@ -46,7 +46,7 @@
     <div class="col-lg-6">
         <div class="form-group">
             <label  for="category_id">
-                <i class="fas fa-user-graduate"> Categoría</i> 
+                <i class="fas fa-user-graduate"></i><b> Categoría</b>
             </label>
             <select name="category_id" id="category_id" class="form-control form-control-alternative">
                 <option disabled selected>Seleccionar una Categoría</option>
@@ -63,7 +63,7 @@
     <div class="col-lg-6">
         <div class="form-group">
             <label  for="measureUnit_id">
-                <i class="fas fa-user-graduate"> Unidad de medida</i> 
+                <i class="fas fa-user-graduate"></i><b> Unidad de medida</b>
             </label>
             <select name="measureUnit_id" id="measureUnit_id" class="form-control form-control-alternative">
                 <option disabled selected>Seleccionar una Unidad de medida</option>
@@ -80,7 +80,7 @@
     <div class="col-lg-6">
         <div class="form-group">
             <label  for="supplier_id">
-                <i class="fas fa-user-graduate"> Proveedor</i> 
+                <i class="fas fa-user-graduate"></i><b> Proveedor</b>
             </label>
             <select name="supplier_id" id="supplier_id" class="form-control form-control-alternative">
                 <option disabled selected>Seleccionar un proveedor</option>
