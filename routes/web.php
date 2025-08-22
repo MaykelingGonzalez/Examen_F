@@ -7,6 +7,7 @@ use App\Http\Controllers\TypeMovementController;
 use App\Http\Controllers\MeasureUnitController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\MovementController;
 use App\Exports\SuppliersExport;
 use App\Exports\ProductsExport;
 use Maatwebsite\Excel\Facades\Excel;

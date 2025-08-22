@@ -9,7 +9,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <h3 class="mb-0"> Movimientos</h3>
                         <a href="{{ route('movements.create') }}" class="btn btn-primary">
-                            <i class="fas fa-plus"> Nuevo movimiento</i> 
+                            <i class="fas fa-plus"> </i> <b>Nuevo movimiento</b>
                         </a>
                     </div>
                 </div>
@@ -17,12 +17,12 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-ligth">
                             <tr>
-                                <th scope="col"><b class="fas fa-book"> Cantidad de movimientos</b></th>
-                                <th scope="col"><b class="fas fa-book-open"> Observaciones</b></th>
-                                <th scope="col"><b class="fas fa-book-open"> Tipo de movimiento</b></th>
-                                <th scope="col"><b class="fas fa-tv"> Producto</b></th>
-                                <th scope="col"><b class="fas fa-barcode"> Usuario</b></th>
-                                <th scope="col"><b class="fas fa-bars"> Acciones</b></th>
+                                <th scope="col"><i class="fas fa-book"></i><b> Cantidad de movimientos</b></th>
+                                <th scope="col"><i class="fas fa-book-open"></i><b> Observaciones</b></th>
+                                <th scope="col"><i class="fas fa-book-open"></i><b> Tipo de movimiento</b></th>
+                                <th scope="col"><i class="fas fa-tv"></i><b> Producto</b></th>
+                                <th scope="col"><i class="fas fa-barcode"></i><b> Usuario</b></th>
+                                <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
                         </thead>
                         <tbody>

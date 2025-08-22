@@ -16,7 +16,7 @@ class MovementController extends Controller
      */
     public function index()
     {
-        $movements = Movement::with('type_movement', 'product', 'user')->paginate(10);
+        $movements = Movement::with('typeMovement', 'product', 'user')->paginate(10);
         return view('movements.index', compact('movements'));
     }
 
@@ -25,7 +25,7 @@ class MovementController extends Controller
      */
     public function create()
     {
-        $movements = Movement();
+        $movements = new Movement();
         $type_movements = TypeMovement::all();
         $products = Product::all();
         $users = User::all();
@@ -46,7 +46,7 @@ class MovementController extends Controller
      */
     public function show(int $id)
     {
-        $movements = Movement();
+        $movements = Movement::find($id);
         $type_movements = TypeMovement::all();
         $products = Product::all();
         $users = User::all();
@@ -58,11 +58,11 @@ class MovementController extends Controller
      */
     public function edit(int $id)
     {
-        $movements = Movement();
+        $movements = Movement::find($id);
         $type_movements = TypeMovement::all();
         $products = Product::all();
         $users = User::all();
-        return view('movements.create', compact('movements', 'type_movements', 'products', 'users'));
+        return view('movements.edit', compact('movements', 'type_movements', 'products', 'users'));
     }
 
     /**

@@ -12,7 +12,7 @@
 
                     <div class="col-4 text-right">
                     <a href="{{ route('movements.index') }}" class="btn btn-sm btn-primary">
-                        <i class="fas fa-arrow-left"> Volver</i>
+                        <i class="fas fa-arrow-left"></i><b> Volver</b>
                     </a>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="quantity">
-                                    <i class="fas fa-book"> Cantidad de movimientos</i>
+                                    <i class="fas fa-book"></i><b> Cantidad de movimientos</b>
                                 </label>
                                 <p>{{ $movement->quantity }}</p>
                             </div>
@@ -35,7 +35,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="observations">
-                                    <i class="fas fa-book-open"> Observaciones </i>
+                                    <i class="fas fa-book-open"></i><b> Observaciones </b>
                                 </label>
                                 <p>{{ $movement->observations }}</p>
                             </div>
@@ -46,7 +46,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="type_movement_id">
-                                    <i class="fas fa-building"> Tipo de movimiento</i>
+                                    <i class="fas fa-building"></i><b> Tipo de movimiento</b>
                                 </label>
                                 <p>{{ $movement->typeMovement->type_movement }}</p>
                             </div>
@@ -57,7 +57,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="product_id">
-                                    <i class="fas fa-graduation-cap"> Nombre del producto</i>
+                                    <i class="fas fa-graduation-cap"></i><b> Nombre del producto</b>
                                 </label>
                                 <p>{{ $movement->product->name }}</p>
                             </div>
@@ -68,7 +68,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="user_id">
-                                    <i class="fas fa-user"> Nombre del usuario</i>
+                                    <i class="fas fa-user"></i><b> Nombre del usuario</b>
                                 </label>
                                 <p>{{ $movement->user->name }}</p>
                             </div>

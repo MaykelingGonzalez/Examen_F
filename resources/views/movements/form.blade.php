@@ -5,7 +5,7 @@
                 <label class="form-control-label" for="quantity">Cantidad</label>
                 <input type="text" id="quantity" name="quantity" class="form-control form-control-alternative"
                 placeholder="Ingresar cantidad de movimientos"
-                value="{{ old('quantity', $movement->quantity) }}"> 
+                value="{{ old('quantity', $movements->quantity) }}"> 
             </div>
         </div>
     </div>
@@ -16,7 +16,7 @@
                 <label class="form-control-label" for="observations">Observaciones</label>
                 <input type="text" id="observations" name="observations" class="form-control form-control-alternative"
                 placeholder="Ingresar observaciones"
-                value="{{ old('observations', $movement->observations) }}"> 
+                value="{{ old('observations', $movements->observations) }}"> 
             </div>
         </div>
     </div>
@@ -28,10 +28,10 @@
             </label>
             <select name="type_movement_id" id="type_movement_id" class="form-control form-control-alternative">
                 <option disabled selected>Seleccionar un tipo de movimiento</option>
-                @foreach ($typeMovements as $typeMovement)
-                <option value="{{ $typeMovement->id }}"
-                    {{ old('type_movement_id', $movement->type_movement_id ?? '') == $typeMovement->id ? 'selected' : ''}}>
-                    {{ $typeMovement->name }}
+                @foreach ($type_movements as $type_movement)
+                <option value="{{ $type_movement->id }}"
+                    {{ old('type_movement_id', $movements->type_movement_id ?? '') == $type_movement->id ? 'selected' : ''}}>
+                    {{ $type_movement->type_movement }}
                 </option>
                 @endforeach
             </select>
