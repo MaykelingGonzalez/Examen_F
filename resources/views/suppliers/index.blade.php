@@ -9,9 +9,9 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <h3 class="mb-0">Proveedores</h3>
 
-                        <div class="btn-group mt-2 mt-md-0" role="group" aria-label="Botones de acción">
+                        <div class=" mt-2 mt-md-0" role="group" aria-label="Botones de acción">
 
-                        <a href="{{ route('suppliers.export.excel') }}" class="btn btn-success">
+                        <a href="{{ route('suppliers.export.excel') }}" class="btn btn-success mr-3 rounded-full">
                             <i class="fas fa-file-excel"></i> Exportar a Excel
                         </a>    
 
