@@ -38,7 +38,7 @@
                 <i class="fas fa-user"></i><b> Responsable</b>
             </label>
             <select name="responsible_id" id="responsible_id" class="form-control form-control-alternative">
-                <option disabled selected>Seleccionar un Responsable</option>
+                <option disabled selected>Seleccionar un responsable de bodega</option>
                 @foreach ($responsibles as $responsible)
                 <option value="{{ $responsible->id }}"
                     {{ old('responsible_id', $warehouses->responsible_id ?? '') == $responsible->id ? 'selected' : ''}}>

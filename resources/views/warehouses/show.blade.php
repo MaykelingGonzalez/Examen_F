@@ -57,7 +57,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="responsible_id">
-                                    <i class="fas fa-user"></i><b> Nombre del responsable</b>
+                                    <i class="fas fa-user"></i><b> Responsable de bodega</b>
                                 </label>
                                 <p>{{ $warehouses->responsible->name }}</p>
                             </div>
