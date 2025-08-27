@@ -39,9 +39,9 @@
      <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="representative"><i class="fas fa-user"></i><b> Nombre del representante</b></label>
+                <label class="form-control-label" for="representative"><i class="fas fa-user"></i><b> Representante comercial</b></label>
                 <input type="text" id="representative" name="representative" class="form-control form-control-alternative"
-                placeholder="Ingresar nombre del representante"
+                placeholder="Ingresar nombre del representante comercial"
                 value="{{ old('representative', $suppliers->representative) }}">
             </div>
         </div>
@@ -50,9 +50,9 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="telephone"><i class="fas fa-phone"></i><b> Número de teléfono</b></label>
+                <label class="form-control-label" for="telephone"><i class="fas fa-phone"></i><b> Número de contacto</b></label>
                 <input type="text" id="telephone" name="telephone" class="form-control form-control-alternative"
-                placeholder="Ingresar número de teléfono del responsable"
+                placeholder="Ingresar número de contacto del responsable"
                 value="{{ old('telephone', $suppliers->telephone) }}">
             </div>
         </div>
@@ -72,7 +72,7 @@
      <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="address"><i class="fas fa-map-pin"></i><b> Dirección</b></label>
+                <label class="form-control-label" for="address"><i class="fas fa-map-pin"></i><b> Dirección física</b></label>
                 <input type="text" id="address" name="address" class="form-control form-control-alternative"
                 placeholder="Ingresar dirección del proveedor"
                 value="{{ old('address', $suppliers->address) }}">
