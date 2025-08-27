@@ -20,12 +20,12 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-ligth">
                             <tr>
-                                <th scope="col"><i class="fas fa-barcode"></i><b> Cantidad actual</b></th>
-                                <th scope="col"><i class="fas fa-user"></i><b> Cantidad mínima</b></th>    
-                                <th scope="col"><i class="fas fa-building"></i><b> Cantidad máxima</b></th>
-                                <th scope="col"><i class="fas fa-user"></i><b> Descripción</b></th>
-                                <th scope="col"><i class="fas fa-phone"></i><b> Producto</b></th>
-                                <th scope="col"><i class="fas fa-envelope"></i><b> Bodega</b></th>
+                                <th scope="col"><i class="fas fa-arrow-right"></i><b> Cantidad actual</b></th>
+                                <th scope="col"><i class="fas fa-arrow-down"></i><b> Cantidad mínima</b></th>    
+                                <th scope="col"><i class="fas fa-arrow-up"></i><b> Cantidad máxima</b></th>
+                                <th scope="col"><i class="fas fa-comment"></i><b> Descripción</b></th>
+                                <th scope="col"><i class="fas fa-box"></i><b> Producto</b></th>
+                                <th scope="col"><i class="fas fa-warehouse"></i><b> Bodega</b></th>
                                 <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
                         </thead>

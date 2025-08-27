@@ -7,7 +7,7 @@
             <div class="card-header bg-white border-0">
                 <div class="row align-items-center">
                     <div class="col-8">
-                        <h3 class="mb-0"><i class="fas fa-newspaper"></i><b> Ver Inventario</b></h3>
+                        <h3 class="mb-0"><i class="fas fa-eye"></i><b> Ver Inventario</b></h3>
                     </div>
 
                     <div class="col-4 text-right">
@@ -24,7 +24,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="current_quantity">
-                                    <i class="fas fa-file"></i><b> Cantidad actual</b>
+                                    <i class="fas fa-arrow-right"></i><b> Cantidad actual</b>
                                 </label>
                                 <p>{{ $inventories->current_quantity }}</p>
                             </div>
@@ -35,7 +35,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="minimum_quantity">
-                                    <i class="fas fa-file"></i><b> Cantidad mínima</b>
+                                    <i class="fas fa-arrow-down"></i><b> Cantidad mínima</b>
                                 </label>
                                 <p>{{ $inventories->minimum_quantity }}</p>
                             </div>
@@ -46,7 +46,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="maximum_quantity">
-                                    <i class="fas fa-file"></i><b> Cantidad máxima</b>
+                                    <i class="fas fa-arrow-up"></i><b> Cantidad máxima</b>
                                 </label>
                                 <p>{{ $inventories->maximum_quantity }}</p>
                             </div>
@@ -57,7 +57,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="description">
-                                    <i class="fas fa-file"></i><b> Descripción</b>
+                                    <i class="fas fa-comment"></i><b> Descripción</b>
                                 </label>
                                 <p>{{ $inventories->description }}</p>
                             </div>
@@ -68,7 +68,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="product_id">
-                                    <i class="fas fa-user"></i><b> Nombre del producto</b>
+                                    <i class="fas fa-box"></i><b> Nombre del producto</b>
                                 </label>
                                 <p>{{ $inventories->product->name }}</p>
                             </div>
@@ -79,7 +79,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="warehouse_id">
-                                    <i class="fas fa-book"></i><b> Nombre de la bodega</b>
+                                    <i class="fas fa-boxes"></i><b> Nombre de la bodega</b>
                                 </label>
                                 <p>{{ $inventories->warehouse->name }}</p>
                             </div>
