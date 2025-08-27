@@ -58,6 +58,26 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
         ]);
 
+        $this->call([
+            ProductSeeder::class,
+        ]);
+
+        $this->call([
+            MovementSeeder::class,
+        ]);
+
+        $this->call([
+            ResponsibleSeeder::class,
+        ]);
+
+        $this->call([
+            WarehouseSeeder::class,
+        ]);
+
+        $this->call([
+            InventorySeeder::class,
+        ]);
+
         // Category::factory(7)->create();
         // Post::factory(20)->create();
         // Animal::factory(5)->create();

@@ -20,7 +20,7 @@ class MeasureUnitSeeder extends Seeder
 
         MeasureUnit::create([
             'name' => 'Kilogramo',
-            'symbol' => 'kg',
+            'symbol' => 'Kg',
         ]);
 
         MeasureUnit::create([
@@ -35,17 +35,17 @@ class MeasureUnitSeeder extends Seeder
 
         MeasureUnit::create([
             'name' => 'Libra',
-            'symbol' => 'lb',
+            'symbol' => 'Lb',
         ]);
 
         MeasureUnit::create([
             'name' => 'Unidad',
-            'symbol' => 'u',
+            'symbol' => 'Ud',
         ]);
 
         MeasureUnit::create([
             'name' => 'Litro',
-            'symbol' => 'L',
+            'symbol' => 'Lt',
         ]);
 
         MeasureUnit::create([
