@@ -8,6 +8,7 @@ use App\Http\Requests\MovementRequest;
 use App\Models\TypeMovement;
 use App\Models\Product;
 use App\Models\User;
+use Maatwebsite\Excel\Facades\Excel;
 
 class MovementController extends Controller
 {
@@ -83,5 +84,10 @@ class MovementController extends Controller
         $movements = Movement::find($id);
         $movements->delete();
         return redirect()->route('movements.index')->with('deleted', 'Movimiento eliminado exitosamente.');
+    }
+
+    public function export()
+    {
+        return Excel::download(new MovementsExport, 'ReporteMovimientos.xlsx');
     }
 }
