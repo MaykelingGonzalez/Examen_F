@@ -46,6 +46,18 @@ class DatabaseSeeder extends Seeder
             SupplierSeeder::class,
         ]);
 
+        $this->call([
+            TypeMovementSeeder::class,
+        ]);
+
+        $this->call([
+            MeasureUnitSeeder::class,
+        ]);
+
+        $this->call([
+            CategorySeeder::class,
+        ]);
+
         // Category::factory(7)->create();
         // Post::factory(20)->create();
         // Animal::factory(5)->create();
