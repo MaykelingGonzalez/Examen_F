@@ -20,7 +20,7 @@
             <div class="form-group">
                 <label class="form-control-label" for="symbol"><i class="fas fa-ruler"></i><b> Símbolo</b></label>
                 <select name="symbol" id="symbol" class="form-control form-control-alternative">
-                    <option value="" disabled selected>Seleccione el símbolo</option>
+                    <option value="" disabled selected>Seleccione el símbolo de la unidad de medida</option>
                     <option value="m" {{ old('symbol', $measureUnits->symbol) == 'm' ? 'selected' : '' }}>m</option>
                     <option value="kg" {{ old('symbol', $measureUnits->symbol) == 'kg' ? 'selected' : '' }}>kg</option>
                     <option value="m²" {{ old('symbol', $measureUnits->symbol) == 'm²' ? 'selected' : '' }}>m²</option>
