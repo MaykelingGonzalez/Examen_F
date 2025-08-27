@@ -7,7 +7,7 @@
             <div class="card shadow">
                 <div class="card-header border-0">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h3 class="mb-0"><i class="fas fa-tags"></i><b> Categorías</b></h3>
+                        <h3 class="mb-0"><b> Categorías</b></h3>
 
                         <div class="btn-group mt-2 mt-md-0" role="group" aria-label="Botones de acción">
 
@@ -21,7 +21,7 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-ligth">
                             <tr>
-                                <th scope="col"><i class="fas fa-tags"></i><b> Categoría</b></th>    
+                                <th scope="col"><i class="fas fa-list"></i><b> Categoría</b></th>    
                                 <th scope="col"><i class="fas fa-comment"></i><b> Descripción</b></th>
                                 <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
