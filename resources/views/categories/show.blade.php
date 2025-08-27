@@ -35,7 +35,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="symbol">
-                                    <i class="fas fa-comment"></i><b> Descripción</b> 
+                                    <i class="fas fa-pen"></i><b> Descripción</b> 
                                 </label>
                                 <p>{{ $categories->description }}</p>
                             </div>

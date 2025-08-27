@@ -1,9 +1,9 @@
  <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="name"><i class="fas fa-weight-hanging"></i><b> categoría</b></label>
+                <label class="form-control-label" for="name"><i class="fas fa-tags"></i><b> Categoría</b></label>
                 <select name="name" id="name" class="form-control form-control-alternative">
-                    <option value="" disabled selected>Seleccione la categoría</option>
+                    <option value="" disabled selected>Seleccione una categoría</option>
                     <option value="Herramientas manuales" {{ old('name', $categories->name) == 'Herramientas manuales' ? 'selected' : '' }}>Herramientas manuales</option>
                     <option value="Herramientas eléctricas" {{ old('name', $categories->name) == 'Herramientas eléctricas' ? 'selected' : '' }}>Herramientas eléctricas</option>
                     <option value="Herramientas neumáticas" {{ old('name', $categories->name) == 'Herramientas neumáticas' ? 'selected' : '' }}>Herramientas neumáticas</option>
@@ -25,9 +25,9 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="description"><i class="fas fa-building"></i><b> Descripción</b></label>
+                <label class="form-control-label" for="description"><i class="fas fa-pen"></i><b> Descripción</b></label>
                 <input type="text" id="description" name="description" class="form-control form-control-alternative"
-                placeholder="Ingresar descripción del proveedor"
+                placeholder="Ingresar descripción de la categoría"
                 value="{{ old('description', $categories->description) }}">
             </div>
         </div>

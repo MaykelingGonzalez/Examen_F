@@ -21,8 +21,8 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-ligth">
                             <tr>
-                                <th scope="col"><i class="fas fa-list"></i><b> Categoría</b></th>    
-                                <th scope="col"><i class="fas fa-comment"></i><b> Descripción</b></th>
+                                <th scope="col"><i class="fas fa-tags"></i><b> Categoría</b></th>    
+                                <th scope="col"><i class="fas fa-pen"></i><b> Descripción</b></th>
                                 <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
                         </thead>
