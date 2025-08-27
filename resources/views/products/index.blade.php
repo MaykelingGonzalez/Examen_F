@@ -27,9 +27,9 @@
                             <tr>
                                 <th scope="col"><i class="fas fa-barcode"></i><b> Código del producto</b></th>
                                 <th scope="col"><i class="fas fa-box"></i><b> Producto</b></th>    
-                                <th scope="col"><i class="fas fa-money-bill"></i><b> Precio</b></th>
-                                <th scope="col"><i class="fas fa-comment"></i><b> Descripción</b></th>
-                                <th scope="col"><i class="fas fa-list"></i><b> Categoría</b></th>
+                                <th scope="col"><i class="fas fa-money-bill"></i><b> Precio Unitario</b></th>
+                                <th scope="col"><i class="fas fa-pen"></i><b> Descripción</b></th>
+                                <th scope="col"><i class="fas fa-tags"></i><b> Categoría</b></th>
                                 <th scope="col"><i class="fas fa-ruler"></i><b> Unidad de medida</b></th>
                                 <th scope="col"><i class="fas fa-boxes"></i><b> Proveedor</b></th>
                                 <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
