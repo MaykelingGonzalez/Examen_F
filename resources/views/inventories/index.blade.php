@@ -7,7 +7,7 @@
             <div class="card shadow">
                 <div class="card-header border-0">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h3 class="mb-0"> Inventario</h3>
+                        <h3 class="mb-0"><b>Inventario</b></h3>
 
                         <div class="btn-group mt-2 mt-md-0" role="group" aria-label="Botones de acción">
 
@@ -15,6 +15,7 @@
                             <i class="fas fa-plus"></i> <b>Nuevo Inventario</b>
                         </a>
                     </div>
+                </div>
                 </div>
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush">
