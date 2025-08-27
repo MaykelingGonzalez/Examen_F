@@ -25,39 +25,10 @@
             </a>
         </li>
     </ul>
-    <!-- Divider -->
-    <hr class="my-3">
-    <!-- Heading -->
-    <h6 class="navbar-heading text-muted">Panel de Administración</h6>
    
-    <!-- Divider -->
+        <!-- Divider -->
     <hr class="my-3">
-    <!-- Heading -->
-    <h6 class="navbar-heading text-muted">Otras Acciones</h6>
-    <!-- Navigation -->
-    <ul class="navbar-nav mb-md-3">
-        <li class="nav-item {{ Request::route()->named('profile.index') ? 'active' : '' }}">
-            <a class="nav-link {{ Request::route()->named('profile.index') ? 'active' : '' }}"
-                href="{{ route('profile.index') }}" wire:navigate>
-                <i class="fas fa-user text-blue"></i> Perfil
-            </a>
-        </li>
 
-        <li class="nav-item">
-            <a class="nav-link" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-               document.getElementById('logout-form').submit();">
-                <i class="fas fa-sign-out-alt text-gray"></i> Cerrar Sesión
-            </a>
-
-            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-            </form>
-        </li>
-    </ul>
-
-    <!-- Divider -->
-    <hr class="my-3">
     <!-- Heading -->
     <h6 class="navbar-heading text-muted">Acciones</h6>
     <!-- Navigation -->
@@ -126,6 +97,23 @@
                 <i class="fas fa-clipboard-list" style="color: #666cd9;"></i> Inventarios
             </a>
         </li>
+    </ul>
 
+        <!-- Divider -->
+    <hr class="my-3">
+
+        <ul class="navbar-nav mb-md-3">
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+               document.getElementById('logout-form').submit();">
+                <i class="fas fa-sign-out-alt text-gray"></i> Cerrar Sesión
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                @csrf
+            </form>
+        </li>
     </ul>
 </div>
