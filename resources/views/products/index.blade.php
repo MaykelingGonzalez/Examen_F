@@ -9,16 +9,17 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <h3 class="mb-0"><b> Productos</b></h3>
 
-                        <div class="btn-group mt-2 mt-md-0" role="group" aria-label="Botones de acción">
+                        <div class=" mt-2 mt-md-0" role="group" aria-label="Botones de acción">
 
-                        <a href="{{ route('products.export.excel') }}" class="btn btn-success">
-                            <i class="fas fa-file-excel"></i> <b>Exportar a Excel</b>
-                        </a>   
+                        <a href="{{ route('products.export.excel') }}" class="btn btn-success mr-3 rounded-full">
+                            <i class="fas fa-file-excel"></i> Exportar a Excel
+                        </a> 
                         
                         <a href="{{ route('products.create') }}" class="btn btn-primary">
                             <i class="fas fa-plus"></i> <b>Nuevo producto</b>
                         </a>
                     </div>
+                </div>
                 </div>
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush">
