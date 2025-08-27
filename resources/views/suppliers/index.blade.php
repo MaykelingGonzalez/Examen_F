@@ -7,7 +7,7 @@
             <div class="card shadow">
                 <div class="card-header border-0">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h3 class="mb-0">Proveedores</h3>
+                        <h3 class="mb-0"><b>Proveedores</b></h3>
 
                         <div class=" mt-2 mt-md-0" role="group" aria-label="Botones de acción">
 
@@ -26,14 +26,14 @@
                         <thead class="thead-ligth">
                             <tr>
 
-                                <th scope="col"><i class="fas fa-barcode"><i><b> Código del proveedor</b></th>
-                                <th scope="col"><i class="fas fa-user"><i><b> Tipo de proveedor</b></th>    
-                                <th scope="col"><i class="fas fa-building"><i><b> Empresa</b></th>
-                                <th scope="col"><i class="fas fa-user"><i><b> Representante</b></th>
-                                <th scope="col"><i class="fas fa-phone"><i><b> Número de teléfono</b></th>
-                                <th scope="col"><i class="fas fa-envelope"><i><b> Correo electrónico</b></th>
-                                <th scope="col"><i class="fas fa-map-pin"><i><b> Dirección</b></th>
-                                <th scope="col"><i class="fas fa-bars"><i><b> Acciones</b></th>
+                                <th scope="col"><i class="fas fa-barcode"></i><b> Código del proveedor</b></th>
+                                <th scope="col"><i class="fas fa-user"></i><b> Tipo de proveedor</b></th>    
+                                <th scope="col"><i class="fas fa-building"></i><b> Empresa</b></th>
+                                <th scope="col"><i class="fas fa-user"></i><b> Representante</b></th>
+                                <th scope="col"><i class="fas fa-phone"></i><b> Número de teléfono</b></th>
+                                <th scope="col"><i class="fas fa-envelope"></i><b> Correo electrónico</b></th>
+                                <th scope="col"><i class="fas fa-map-pin"></i><b> Dirección</b></th>
+                                <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
                         </thead>
                         <tbody>

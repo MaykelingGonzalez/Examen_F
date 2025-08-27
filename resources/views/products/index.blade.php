@@ -7,7 +7,7 @@
             <div class="card shadow">
                 <div class="card-header border-0">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h3 class="mb-0"> Productos</h3>
+                        <h3 class="mb-0"><b> Productos</b></h3>
 
                         <div class="btn-group mt-2 mt-md-0" role="group" aria-label="Botones de acción">
 
@@ -25,12 +25,12 @@
                         <thead class="thead-ligth">
                             <tr>
                                 <th scope="col"><i class="fas fa-barcode"></i><b> Código del producto</b></th>
-                                <th scope="col"><i class="fas fa-user"></i><b> Producto</b></th>    
-                                <th scope="col"><i class="fas fa-building"></i><b> Precio</b></th>
-                                <th scope="col"><i class="fas fa-user"></i><b> Descripción</b></th>
-                                <th scope="col"><i class="fas fa-phone"></i><b> Categoría</b></th>
-                                <th scope="col"><i class="fas fa-envelope"></i><b> Unidad de medida</b></th>
-                                <th scope="col"><i class="fas fa-map-pin"></i><b> Proveedor</b></th>
+                                <th scope="col"><i class="fas fa-box"></i><b> Producto</b></th>    
+                                <th scope="col"><i class="fas fa-money-bill"></i><b> Precio</b></th>
+                                <th scope="col"><i class="fas fa-comment"></i><b> Descripción</b></th>
+                                <th scope="col"><i class="fas fa-list"></i><b> Categoría</b></th>
+                                <th scope="col"><i class="fas fa-ruler"></i><b> Unidad de medida</b></th>
+                                <th scope="col"><i class="fas fa-boxes"></i><b> Proveedor</b></th>
                                 <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
                         </thead>
