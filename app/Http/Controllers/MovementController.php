@@ -88,6 +88,7 @@ class MovementController extends Controller
 
     public function export()
     {
+        $movements = Movement::with('user')->get();
         return Excel::download(new MovementsExport, 'ReporteMovimientos.xlsx');
     }
 }

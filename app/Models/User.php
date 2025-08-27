@@ -72,8 +72,8 @@ class User extends Authenticatable
         return $this->role === 2;
     }
 
-    public function movements()
+    public function movement()
     {
-        return $this->hasMany(Movement::class);
+        return $this->hasOne(Movement::class);
     }
 }
