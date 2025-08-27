@@ -22,9 +22,9 @@
                         <thead class="thead-ligth">
                             <tr>
 
-                                <th scope="col"><i class="fas fa-barcode"></i><b> Código del tipo de movimiento</b></th>
-                                <th scope="col"><i class="fas fa-user"></i><b> Tipo de movimiento</b></th>    
-                                <th scope="col"><i class="fas fa-building"></i><b> Descripción</b></th>
+                                <th scope="col"><i class="fas fa-barcode"></i><b> Código</b></th>
+                                <th scope="col"><i class="fas fa-exchange-alt"></i><b> Tipo de movimiento</b></th>    
+                                <th scope="col"><i class="fas fa-pen"></i><b> Descripción</b></th>
                                 <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
                         </thead>
