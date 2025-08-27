@@ -7,7 +7,12 @@
             <div class="card shadow">
                 <div class="card-header border-0">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h3 class="mb-0"> Movimientos</h3>
+                        <h3 class="mb-0"><b> Movimientos</b></h3>
+
+                        <a href="{{ route('movements.export.excel') }}" class="btn btn-success">
+                            <i class="fas fa-file-excel"></i> Exportar a Excel
+                        </a>   
+
                         <a href="{{ route('movements.create') }}" class="btn btn-primary">
                             <i class="fas fa-plus"> </i> <b>Nuevo movimiento</b>
                         </a>
@@ -17,11 +22,11 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-ligth">
                             <tr>
-                                <th scope="col"><i class="fas fa-book"></i><b> Cantidad de movimientos</b></th>
-                                <th scope="col"><i class="fas fa-book-open"></i><b> Observaciones</b></th>
-                                <th scope="col"><i class="fas fa-book-open"></i><b> Tipo de movimiento</b></th>
-                                <th scope="col"><i class="fas fa-tv"></i><b> Producto</b></th>
-                                <th scope="col"><i class="fas fa-barcode"></i><b> Usuario</b></th>
+                                <th scope="col"><i class="fas fa-exchange-alt "></i><b> Cantidad de movimientos</b></th>
+                                <th scope="col"><i class="fas fa-comment-dots"></i><b> Observaciones</b></th>
+                                <th scope="col"><i class="fas fa-exchange-alt"></i><b> Tipo de movimiento</b></th>
+                                <th scope="col"><i class="fas fa-box"></i><b> Producto</b></th>
+                                <th scope="col"><i class="fas fa-user"></i><b> Usuario</b></th>
                                 <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
                         </thead>

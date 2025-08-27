@@ -2,7 +2,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="quantity">Cantidad</label>
+                <label class="form-control-label" for="quantity"><i class="fas fa-exchange-alt"></i> Cantidad de movimientos</label>
                 <input type="text" id="quantity" name="quantity" class="form-control form-control-alternative"
                 placeholder="Ingresar cantidad de movimientos"
                 value="{{ old('quantity', $movements->quantity) }}"> 
