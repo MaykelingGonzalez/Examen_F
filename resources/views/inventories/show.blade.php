@@ -57,7 +57,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="description">
-                                    <i class="fas fa-comment"></i><b> Descripción</b>
+                                    <i class="fas fa-pen"></i><b> Descripción</b>
                                 </label>
                                 <p>{{ $inventories->description }}</p>
                             </div>

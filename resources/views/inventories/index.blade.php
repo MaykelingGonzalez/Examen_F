@@ -21,25 +21,28 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-ligth">
                             <tr>
+                                <th scope="col"><i class="fas fa-box"></i><b> Producto</b></th>
                                 <th scope="col"><i class="fas fa-arrow-right"></i><b> Cantidad actual</b></th>
                                 <th scope="col"><i class="fas fa-arrow-down"></i><b> Cantidad mínima</b></th>    
                                 <th scope="col"><i class="fas fa-arrow-up"></i><b> Cantidad máxima</b></th>
-                                <th scope="col"><i class="fas fa-comment"></i><b> Descripción</b></th>
-                                <th scope="col"><i class="fas fa-box"></i><b> Producto</b></th>
+                                <th scope="col"><i class="fas fa-pen"></i><b> Descripción</b></th>
+                                
                                 <th scope="col"><i class="fas fa-warehouse"></i><b> Bodega</b></th>
+                                <th scope="col"><i class="fas fa-calendar"></i><b> Fecha</b></th>
                                 <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($inventories as $inventory)
-                            <tr>                               
+                            <tr>   
+                                    <td>{{ $inventory->product->name }}</td>                            
                                     <td>{{ $inventory->current_quantity }}</td>
                                     <td>{{ $inventory->minimum_quantity }}</td>
                                     <td>{{ $inventory->maximum_quantity }}</td>
-                                    <td>{{ $inventory->description }}</td>
-                                    <td>{{ $inventory->product->category->name }}</td>
-                                    <td>{{ $inventory->product->measureUnit->symbol }}</td>
-                                    <td>{{ $inventory->product->supplier->company }}</td>
+                                    <td>{{ $inventory->description }}</td> 
+                                    <td>{{ $inventory->warehouse->name }}</td>
+                                    <td>{{ $inventory->created_at }}</td>
+
 
                                 <td style="white-space: nowrap; display: flex; align-items: center;">
                                     <a href="{{ route('inventories.show', $inventory->id) }}" class="btn btn-primary btn-sm" style="margin-right: 5px;">

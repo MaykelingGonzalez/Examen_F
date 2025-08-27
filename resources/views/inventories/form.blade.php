@@ -1,4 +1,23 @@
 <div class="pl-lg-4">
+
+
+<div class="col-lg-6">
+        <div class="form-group">
+            <label  for="product_id">
+                <i class="fas fa-box"></i><b> Producto</b>
+            </label>
+            <select name="product_id" id="product_id" class="form-control form-control-alternative">
+                <option disabled selected>Seleccionar un Producto</option>
+                @foreach ($products as $product)
+                <option value="{{ $product->id }}"
+                    {{ old('product_id', $inventories->product_id ?? '') == $product->id ? 'selected' : ''}}>
+                    {{ $product->name }}
+                </option>
+                @endforeach
+            </select>
+        </div>
+    </div>
+    
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
@@ -35,28 +54,11 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="description"><i class="fas fa-comment"></i> <b>Descripción</b></label>
+                <label class="form-control-label" for="description"><i class="fas fa-pen"></i> <b>Descripción</b></label>
                 <input type="text" id="description" name="description" class="form-control form-control-alternative"
                 placeholder="Ingresar descripción de producto"
                 value="{{ old('description', $inventories->description) }}"> 
             </div>
-        </div>
-    </div>
-
-    <div class="col-lg-6">
-        <div class="form-group">
-            <label  for="product_id">
-                <i class="fas fa-box"></i><b> Producto</b>
-            </label>
-            <select name="product_id" id="product_id" class="form-control form-control-alternative">
-                <option disabled selected>Seleccionar un Producto</option>
-                @foreach ($products as $product)
-                <option value="{{ $product->id }}"
-                    {{ old('product_id', $inventories->product_id ?? '') == $product->id ? 'selected' : ''}}>
-                    {{ $product->name }}
-                </option>
-                @endforeach
-            </select>
         </div>
     </div>
 
