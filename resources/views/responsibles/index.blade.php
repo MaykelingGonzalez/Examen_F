@@ -22,23 +22,23 @@
                         <thead class="thead-ligth">
                             <tr>
 
-                                <th scope="col"><i class="fas fa-barcode"><i><b> Código del responsable</b></th>
-                                <th scope="col"><i class="fas fa-user"><i><b> Responsable</b></th>    
-                                <th scope="col"><i class="fas fa-building"><i><b> Número de cédula</b></th>
-                                <th scope="col"><i class="fas fa-user"><i><b> Fecha de nacimiento</b></th>
-                                <th scope="col"><i class="fas fa-phone"><i><b> Lugar de nacimiento</b></th>
-                                <th scope="col"><i class="fas fa-envelope"><i><b> Edad</b></th>
-                                <th scope="col"><i class="fas fa-map-pin"><i><b> Sexo</b></th>
-                                <th scope="col"><i class="fas fa-map-pin"><i><b> Numero de teléfono</b></th>
-                                <th scope="col"><i class="fas fa-map-pin"><i><b> Correo electrónico</b></th>
-                                <th scope="col"><i class="fas fa-map-pin"><i><b> País</b></th>
-                                <th scope="col"><i class="fas fa-map-pin"><i><b> Nacionalidad</b></th>
-                                <th scope="col"><i class="fas fa-map-pin"><i><b> Departamento</b></th>
-                                <th scope="col"><i class="fas fa-map-pin"><i><b> Municipio</b></th>
-                                <th scope="col"><i class="fas fa-map-pin"><i><b> Dirección</b></th>
-                                <th scope="col"><i class="fas fa-map-pin"><i><b> Estado Civil</b></th>
-                                <th scope="col"><i class="fas fa-map-pin"><i><b> Nivel académico</b></th>
-                                <th scope="col"><i class="fas fa-bars"><i><b> Acciones</b></th>
+                                <th scope="col"><i class="fas fa-barcode"></i><b> Código del responsable</b></th>
+                                <th scope="col"><i class="fas fa-user"></i><b> Responsable</b></th>    
+                                <th scope="col"><i class="fas fa-id-card"></i><b> Número de cédula</b></th>
+                                <th scope="col"><i class="fas fa-calendar-alt"></i><b> Fecha de nacimiento</b></th>
+                                <th scope="col"><i class="fas fa-map-marker-alt"></i><b> Lugar de nacimiento</b></th>
+                                <th scope="col"><i class="fas fa-birthday-cake"></i><b> Edad</b></th>
+                                <th scope="col"><i class="fas fa-venus-mars"></i><b> Sexo</b></th>
+                                <th scope="col"><i class="fas fa-phone"></i><b> Numero de teléfono</b></th>
+                                <th scope="col"><i class="fas fa-envelope"></i><b> Correo electrónico</b></th>
+                                <th scope="col"><i class="fas fa-globe"></i><b> País</b></th>
+                                <th scope="col"><i class="fas fa-flag"></i><b> Nacionalidad</b></th>
+                                <th scope="col"><i class="fas fa-map-marker-alt"></i><b> Departamento</b></th>
+                                <th scope="col"><i class="fas fa-map-marker-alt"></i><b> Municipio</b></th>
+                                <th scope="col"><i class="fas fa-map-pin"></i><b> Dirección</b></th>
+                                <th scope="col"><i class="fas fa-heart"></i><b> Estado Civil</b></th>
+                                <th scope="col"><i class="fas fa-graduation-cap"></i><b> Nivel académico</b></th>
+                                <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
                         </thead>
                         <tbody>

@@ -15,7 +15,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="name"><i class="fas fa-building"></i><b> Responsable</b></label>
+                <label class="form-control-label" for="name"><i class="fas fa-user"></i><b> Responsable</b></label>
                 <input type="text" id="name" name="name" class="form-control form-control-alternative"
                 placeholder="Ingresar nombre del responsable"
                 value="{{ old('name', $responsibles->name) }}">
@@ -26,7 +26,7 @@
      <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="identification"><i class="fas fa-user"></i><b> Cédula</b></label>
+                <label class="form-control-label" for="identification"><i class="fas fa-id-card"></i><b> Cédula</b></label>
                 <input type="text" id="identification" name="identification" class="form-control form-control-alternative"
                 placeholder="Ingresar cédula del responsable"
                 value="{{ old('identification', $responsibles->identification) }}">
@@ -37,7 +37,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="birthdate"><i class="fas fa-phone"></i><b> Fecha de nacimiento</b></label>
+                <label class="form-control-label" for="birthdate"><i class="fas fa-calendar-alt"></i><b> Fecha de nacimiento</b></label>
                 <input type="date" id="birthdate" name="birthdate" class="form-control form-control-alternative"
                 placeholder="Ingresar fecha de nacimiento del responsable"
                 value="{{ old('birthdate', $responsibles->birthdate) }}">
@@ -48,7 +48,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="birthplace"><i class="fas fa-envelope"></i><b> Lugar de nacimiento</b></label>
+                <label class="form-control-label" for="birthplace"><i class="fas fa-map-marker-alt"></i><b> Lugar de nacimiento</b></label>
                 <input type="text" id="birthplace" name="birthplace" class="form-control form-control-alternative"
                 placeholder="Ingresar lugar de nacimiento del responsable"
                 value="{{ old('birthplace', $responsibles->birthplace) }}">
@@ -59,7 +59,7 @@
      <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="age"><i class="fas fa-map-pin"></i><b> Edad</b></label>
+                <label class="form-control-label" for="age"><i class="fas fa-birthday-cake"></i><b> Edad</b></label>
                 <input type="text" id="age" name="age" class="form-control form-control-alternative"
                 placeholder="Ingresar edad del responsable"
                 value="{{ old('age', $responsibles->age) }}">
@@ -70,7 +70,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="sex"><b>Sexo</b></label>
+                <label class="form-control-label" for="sex"> <i class="fas fa-venus-mars"></i><b> Sexo</b></label>
                 <select name="sex" id="sex" class = "form-control">
                     <option value="" disabled selected>Seleccione el sexo</option>
                     <option value="Femenino" {{old('sex', $responsibles->sex ?? '') == 'Femenino' ? 'selected' : ''}}>Femenino</option>
@@ -83,7 +83,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="telephone"><b>Número de teléfono</b></label>
+                <label class="form-control-label" for="telephone"><i class="fas fa-phone"></i><b> Número de teléfono</b></label>
                 <input type="text" id="telephone" name="telephone" class="form-control form-control-alternative"
                 placeholder="Ingresar número de teléfono"
                 value="{{ old('telephone', $responsibles->telephone ??'') }}">
@@ -94,7 +94,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="email"><b>Correo electrónico</b></label>
+                <label class="form-control-label" for="email"> <i class="fas fa-envelope"></i><b> Correo electrónico</b></label>
                 <input type="email" id="email" name="email" class="form-control form-control-alternative"
                 placeholder="Ingresar correo del responsable"
                 value="{{ old('email', $responsibles->email ??'') }}">
@@ -105,7 +105,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="country"><b>País</b></label>
+                <label class="form-control-label" for="country"> <i class="fas fa-globe"></i><b> País</b></label>
                 <select name="country" id="country" class = "form-control">
                     <option value="" disabled selected>Seleccione el país de procedencia</option>
                     <option value="Belice" {{old('country', $responsibles->country ?? '') == 'Belice' ? 'selected' : ''}}>Belice</option>
@@ -123,7 +123,7 @@
      <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="nationality"><b>Nacionalidad</b></label>
+                <label class="form-control-label" for="nationality"> <i class="fas fa-flag"></i><b> Nacionalidad</b></label>
                 <select name="nationality" id="nationality" class = "form-control">
                     <option value="" disabled selected>Seleccione la nacionalidad</option>
                     <option value="Beliceño" {{old('nationality', $responsibles->nationality ?? '') == 'Beliceño' ? 'selected' : ''}}>Beliceño</option>
@@ -141,7 +141,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="department"><b>Departamento</b></label>
+                <label class="form-control-label" for="department"><i class="fas fa-map-marker-alt"></i><b> Departamento</b></label>
                 <input type="text" id="department" name="department" class="form-control form-control-alternative"
                 placeholder="Ingresar departamento del responsable"
                 value="{{ old('department', $responsibles->department) }}">
@@ -152,7 +152,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="municipality"><b>Municipio</b></label>
+                <label class="form-control-label" for="municipality"><i class="fas fa-map-marker-alt"></i><b> Municipio</b></label>
                 <input type="text" id="municipality" name="municipality" class="form-control form-control-alternative"
                 placeholder="Ingresar municipio del responsable"
                 value="{{ old('municipality', $responsibles->municipality) }}">
@@ -163,7 +163,7 @@
      <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="address"><b>Dirección</b></label>
+                <label class="form-control-label" for="address"> <i class="fas fa-map-pin"></i><b> Dirección</b></label>
                 <input type="note" id="address" name="address" class="form-control form-control-alternative"
                 placeholder="Ingresar dirección del responsable"
                 value="{{ old('address', $responsibles->address) }}">
@@ -174,7 +174,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-                <label class="form-control-label" for="marital_status"><b>Estado Civil</b></label>
+                <label class="form-control-label" for="marital_status"> <i class="fas fa-heart"></i><b> Estado Civil</b></label>
                 <select name="marital_status" id="marital_status" class = "form-control">
                     <option value="" disabled selected>Seleccione el estado civil</option>
                     <option value="Soltero/a" {{old('marital_status', $responsibles->marital_status ?? '') == 'Soltero/a' ? 'selected' : ''}}>Soltero/a</option>
@@ -190,7 +190,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
-               <label class="form-control-label" for="academic_level"><b>Nivel académico</b></label>
+               <label class="form-control-label" for="academic_level"><i class="fas fa-graduation-cap"></i><b> Nivel académico</b></label>
                 <select name="academic_level" id="academic_level" class = "form-control">
                     <option value="" disabled selected>Seleccione el nivel académico</option>
                     <option value="Educación básica" {{old('academic_level', $responsibles->academic_level ?? '') == 'Educación básica' ? 'selected' : ''}}>Educación básica</option>
