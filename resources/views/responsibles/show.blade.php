@@ -26,7 +26,7 @@
                                 <label for="form-control-label" for="responsible_code">
                                     <i class="fas fa-barcode"></i><b> Código del responsable</b> 
                                 </label>
-                                <p>{{ $responsible->responsible_code }}</p>
+                                <p>{{ $responsibles->responsible_code }}</p>
                             </div>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                                 <label for="form-control-label" for="name">
                                     <i class="fas fa-user"></i><b> Responsable</b> 
                                 </label>
-                                <p>{{ $responsible->name }}</p>
+                                <p>{{ $responsibles->name }}</p>
                             </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
                                 <label for="form-control-label" for="identification">
                                     <i class="fas fa-id-card"></i><b> Número de cédula</b> 
                                 </label>
-                                <p>{{ $responsible->identification }}</p>
+                                <p>{{ $responsibles->identification }}</p>
                             </div>
                         </div>
                     </div>
@@ -60,7 +60,7 @@
                                 <label for="form-control-label" for="birthdate">
                                     <i class="fas fa-calendar-alt"></i><b> Fecha de nacimiento</b>
                                 </label>
-                                <p>{{ $responsible->birthdate }}</p>
+                                <p>{{ $responsibles->birthdate }}</p>
                             </div>
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                                 <label for="form-control-label" for="birthplace">
                                     <i class="fas fa-home"></i><b> Lugar de nacimiento</b>
                                 </label>
-                                <p>{{ $responsible->birthplace }}</p>
+                                <p>{{ $responsibles->birthplace }}</p>
                             </div>
                         </div>
                     </div>
@@ -82,7 +82,7 @@
                                 <label for="form-control-label" for="age">
                                     <i class="fas fa-calendar-alt"></i><b> Edad</b>
                                 </label>
-                                <p>{{ $responsible->age }}</p>
+                                <p>{{ $responsibles->age }}</p>
                             </div>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                                 <label for="form-control-label" for="sex">
                                     <i class="fas fa-venus-mars"></i><b> Sexo</b>
                                 </label>
-                                <p>{{ $responsible->sex }}</p>
+                                <p>{{ $responsibles->sex }}</p>
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
                                 <label for="form-control-label" for="telephone">
                                     <i class="fas fa-phone"></i><b> Teléfono</b>
                                 </label>
-                                <p>{{ $responsible->telephone }}</p>
+                                <p>{{ $responsibles->telephone }}</p>
                             </div>
                         </div>
                     </div>
@@ -115,7 +115,7 @@
                                 <label for="form-control-label" for="email">
                                     <i class="fas fa-envelope"></i><b> Email</b>
                                 </label>
-                                <p>{{ $responsible->email }}</p>
+                                <p>{{ $responsibles->email }}</p>
                             </div>
                         </div>
                     </div>
@@ -124,9 +124,9 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="country">
-                                    <i class="fas fa-flag"></i><b> País</b>
+                                    <i class="fas fa-globe"></i><b> País</b>
                                 </label>
-                                <p>{{ $responsible->country }}</p>
+                                <p>{{ $responsibles->country }}</p>
                             </div>
                         </div>
                     </div>
@@ -135,9 +135,9 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="nationality">
-                                    <i class="fas fa-venus-mars"></i><b> Nacionalidad</b>
+                                    <i class="fas fa-flag"></i><b> Nacionalidad</b>
                                 </label>
-                                <p>{{ $responsible->nationality }}</p>
+                                <p>{{ $responsibles->nationality }}</p>
                             </div>
                         </div>
                     </div>
@@ -146,9 +146,9 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="department">
-                                    <i class="fas fa-venus-mars"></i><b> Departamento</b>
+                                    <i class="fas fa-map-marker-alt"></i><b> Departamento</b>
                                 </label>
-                                <p>{{ $responsible->department }}</p>
+                                <p>{{ $responsibles->department }}</p>
                             </div>
                         </div>
                     </div>
@@ -157,9 +157,9 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="municipality">
-                                    <i class="fas fa-venus-mars"></i><b> Municipio</b>
+                                    <i class="fas fa-map-marker-alt"></i><b> Municipio</b>
                                 </label>
-                                <p>{{ $responsible->municipality }}</p>
+                                <p>{{ $responsibles->municipality }}</p>
                             </div>
                         </div>
                     </div>
@@ -168,9 +168,9 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="address">
-                                    <i class="fas fa-venus-mars"></i><b> Dirección</b>
+                                    <i class="fas fa-map-pin"></i><b> Dirección</b>
                                 </label>
-                                <p>{{ $responsible->address }}</p>
+                                <p>{{ $responsibles->address }}</p>
                             </div>
                         </div>
                     </div>
@@ -179,9 +179,9 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="marital_status">
-                                    <i class="fas fa-venus-mars"></i><b> Estado Civil</b>
+                                    <i class="fas fa-heart"></i><b> Estado Civil</b>
                                 </label>
-                                <p>{{ $responsible->marital_status }}</p>
+                                <p>{{ $responsibles->marital_status }}</p>
                             </div>
                         </div>
                     </div>
@@ -190,9 +190,9 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="academic_level">
-                                    <i class="fas fa-venus-mars"></i><b> Nivel Académico</b>
+                                    <i class="fas fa-user-graduate"></i><b> Nivel Académico</b>
                                 </label>
-                                <p>{{ $responsible->academic_level }}</p>
+                                <p>{{ $responsibles->academic_level }}</p>
                             </div>
                         </div>
                     </div>
