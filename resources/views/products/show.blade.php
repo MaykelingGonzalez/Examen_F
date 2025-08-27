@@ -45,6 +45,18 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
+                                <label for="form-control-label" for="measureUnit_id">
+                                    <i class="fas fa-ruler"></i><b> Unidad de medida</b>
+                                </label>
+                                <p>{{ $products->measureUnit->name }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
                                 <label for="form-control-label" for="price">
                                     <i class="fas fa-money-bill"></i><b> Precio</b>
                                 </label>
@@ -75,17 +87,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label for="form-control-label" for="measureUnit_id">
-                                    <i class="fas fa-ruler"></i><b> Nombre de la unidad de medida</b>
-                                </label>
-                                <p>{{ $products->measureUnit->name }}</p>
-                            </div>
-                        </div>
-                    </div>
-
+                    
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">

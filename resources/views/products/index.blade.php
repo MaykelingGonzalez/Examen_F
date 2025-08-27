@@ -26,11 +26,12 @@
                         <thead class="thead-ligth">
                             <tr>
                                 <th scope="col"><i class="fas fa-barcode"></i><b> Código del producto</b></th>
-                                <th scope="col"><i class="fas fa-box"></i><b> Producto</b></th>    
+                                <th scope="col"><i class="fas fa-box"></i><b> Producto</b></th>  
+                                <th scope="col"><i class="fas fa-ruler"></i><b> Unidad de medida</b></th>  
                                 <th scope="col"><i class="fas fa-money-bill"></i><b> Precio Unitario</b></th>
                                 <th scope="col"><i class="fas fa-pen"></i><b> Descripción</b></th>
                                 <th scope="col"><i class="fas fa-tags"></i><b> Categoría</b></th>
-                                <th scope="col"><i class="fas fa-ruler"></i><b> Unidad de medida</b></th>
+                                
                                 <th scope="col"><i class="fas fa-boxes"></i><b> Proveedor</b></th>
                                 <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
@@ -40,10 +41,10 @@
                             <tr>                               
                                     <td>{{ $product->product_code }}</td>
                                     <td>{{ $product->name }}</td>
+                                    <td>{{ $product->measureUnit->symbol }}</td>
                                     <td>{{ $product->price }}</td>
                                     <td>{{ $product->description }}</td>
                                     <td>{{ $product->category->name }}</td>
-                                    <td>{{ $product->measureUnit->symbol }}</td>
                                     <td>{{ $product->supplier->company }}</td>
                                 <td style="white-space: nowrap; display: flex; align-items: center;">
                                     <a href="{{ route('products.show', $product->id) }}" class="btn btn-primary btn-sm" style="margin-right: 5px;">

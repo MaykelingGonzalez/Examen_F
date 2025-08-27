@@ -21,6 +21,23 @@
         </div>
     </div>
 
+    <div class="col-lg-6">
+        <div class="form-group">
+            <label  for="measureUnit_id">
+                <i class="fas fa-ruler"></i><b> Unidad de medida</b>
+            </label>
+            <select name="measureUnit_id" id="measureUnit_id" class="form-control form-control-alternative">
+                <option disabled selected>Seleccionar una Unidad de medida</option>
+                @foreach ($measureUnits as $measureUnit)
+                <option value="{{ $measureUnit->id }}"
+                    {{ old('measureUnit_id', $product->measureUnit_id ?? '') == $measureUnit->id ? 'selected' : ''}}>
+                    {{ $measureUnit->symbol }}
+                </option>
+                @endforeach
+            </select>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-lg-6">
             <div class="form-group">
@@ -60,23 +77,7 @@
         </div>
     </div>
 
-    <div class="col-lg-6">
-        <div class="form-group">
-            <label  for="measureUnit_id">
-                <i class="fas fa-ruler"></i><b> Unidad de medida</b>
-            </label>
-            <select name="measureUnit_id" id="measureUnit_id" class="form-control form-control-alternative">
-                <option disabled selected>Seleccionar una Unidad de medida</option>
-                @foreach ($measureUnits as $measureUnit)
-                <option value="{{ $measureUnit->id }}"
-                    {{ old('measureUnit_id', $product->measureUnit_id ?? '') == $measureUnit->id ? 'selected' : ''}}>
-                    {{ $measureUnit->symbol }}
-                </option>
-                @endforeach
-            </select>
-        </div>
-    </div>
-    
+       
     <div class="col-lg-6">
         <div class="form-group">
             <label  for="supplier_id">
