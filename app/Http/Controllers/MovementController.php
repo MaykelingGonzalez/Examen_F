@@ -51,7 +51,7 @@ class MovementController extends Controller
         $type_movements = TypeMovement::all();
         $products = Product::all();
         $users = User::all();
-        return view('movements.create', compact('movements', 'type_movements', 'products', 'users'));
+        return view('movements.show', compact('movements', 'type_movements', 'products', 'users'));
     }
 
     /**
