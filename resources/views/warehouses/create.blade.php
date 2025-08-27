@@ -13,7 +13,7 @@
                     </div>
                     <div class="col-4 text-right">
                         <a href="{{ route('warehouses.index') }}" class="btn btn-sm btn-primary">
-                            <i class="fas fa-arrow-left"> </i><b>Volver</b>
+                            <i class="fas fa-arrow-left"></i><b> Volver</b>
                         </a>
                     </div>
                 </div>

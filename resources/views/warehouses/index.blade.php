@@ -21,9 +21,9 @@
                     <table class="table align-items-center table-flush">
                         <thead class="thead-ligth">
                             <tr>
-                                <th scope="col"><i class="fas fa-barcode"></i><b> Código del bodega</b></th>
-                                <th scope="col"><i class="fas fa-user"></i><b> Bodega</b></th>    
-                                <th scope="col"><i class="fas fa-building"></i><b> Ubicación</b></th>
+                                <th scope="col"><i class="fas fa-barcode"></i><b> Código de bodega</b></th>
+                                <th scope="col"><i class="fas fa-warehouse"></i><b> Bodega</b></th>    
+                                <th scope="col"><i class="fas fa-map-pin"></i><b> Ubicación</b></th>
                                 <th scope="col"><i class="fas fa-user"></i><b> Responsable</b></th>
                                 <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>

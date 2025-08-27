@@ -7,7 +7,7 @@
             <div class="card-header bg-white border-0">
                 <div class="row align-items-center">
                     <div class="col-8">
-                        <h3 class="mb-0"><i class="fas fa-newspaper"></i><b> Ver Bodega</b></h3>
+                        <h3 class="mb-0"><i class="fas fa-eye"></i><b> Ver Bodega</b></h3>
                     </div>
 
                     <div class="col-4 text-right">
@@ -24,7 +24,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="warehouse_code">
-                                    <i class="fas fa-file"></i><b> Código de bodega</b>
+                                    <i class="fas fa-barcode"></i><b> Código de bodega</b>
                                 </label>
                                 <p>{{ $warehouses->warehouse_code }}</p>
                             </div>
@@ -35,7 +35,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="name">
-                                    <i class="fas fa-file"></i><b> Nombre de la bodega</b>
+                                    <i class="fas fa-warehouse"></i><b> Nombre de la bodega</b>
                                 </label>
                                 <p>{{ $warehouses->name }}</p>
                             </div>
@@ -46,7 +46,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="location">
-                                    <i class="fas fa-file"></i><b> Ubicación</b>
+                                    <i class="fas fa-map-pin"></i><b> Ubicación</b>
                                 </label>
                                 <p>{{ $warehouses->location }}</p>
                             </div>
