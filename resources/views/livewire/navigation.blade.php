@@ -88,7 +88,7 @@
         <li class="nav-item {{ Request::route()->named('categories.index') ? 'active' : '' }}">
             <a class="nav-link {{ Request::route()->named('categories.index') ? 'active' : '' }}"
                 href="{{ route('categories.index') }}" wire:navigate>
-                <i class="fas fa-tags" style="color: #666cd9;"></i> Categorías
+                <i class="fas fa-list" style="color: #666cd9;"></i> Categorías
             </a>
         </li>
 

@@ -13,6 +13,7 @@ use App\Http\Controllers\WarehouseController;
 use App\Http\Controllers\InventoryController;
 use App\Exports\SuppliersExport;
 use App\Exports\ProductsExport;
+use App\Exports\MovementsExport;
 use Maatwebsite\Excel\Facades\Excel;
 
 
@@ -51,6 +52,9 @@ Route::middleware('auth')->group(function () {
     })->name('products.export.excel');
 
     Route::resource('/movements', MovementController::class);
+    Route::get('/movements/export/excel', function () {
+        return Excel::download(new MovementsExport, 'ReporteMovimientos.xlsx');
+    })->name('movements.export.excel');
 
     Route::resource('/responsibles', ResponsibleController::class);
 
