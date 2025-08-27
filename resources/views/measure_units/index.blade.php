@@ -7,7 +7,7 @@
             <div class="card shadow">
                 <div class="card-header border-0">
                     <div class="d-flex justify-content-between align-items-center">
-                        <h3 class="mb-0">Unidades de Medida</h3>
+                        <h3 class="mb-0"><b>Unidades de Medida</b></h3>
 
                         <div class="btn-group mt-2 mt-md-0" role="group" aria-label="Botones de acción">
 
