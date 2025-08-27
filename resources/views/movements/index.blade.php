@@ -26,10 +26,11 @@
                         <thead class="thead-ligth">
                             <tr>
                                 <th scope="col"><i class="fas fa-exchange-alt "></i><b> Cantidad de movimientos</b></th>
-                                <th scope="col"><i class="fas fa-comment-dots"></i><b> Observaciones</b></th>
                                 <th scope="col"><i class="fas fa-exchange-alt"></i><b> Tipo de movimiento</b></th>
-                                <th scope="col"><i class="fas fa-box"></i><b> Producto</b></th>
-                                <th scope="col"><i class="fas fa-user"></i><b> Usuario</b></th>
+                                <th scope="col"><i class="fas fa-calendar"></i><b> Fecha</b></th>     
+                                <th scope="col"><i class="fas fa-box"></i><b> Producto</b></th>                                                           
+                                <th scope="col"><i class="fas fa-comment-dots"></i><b> Observaciones</b></th>                                
+                                <th scope="col"><i class="fas fa-user"></i><b> Usuario responsable</b></th>
                                 <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
                         </thead>
@@ -37,10 +38,12 @@
                             @foreach ($movements as $movement)
                             <tr>                               
                                 <td> {{$movement->quantity}}</td>
+                                <td> {{$movement->typeMovement->type_movement}}</td> 
+                                <td> {{$movement->created_at}}</td>  
+                                <td> {{$movement->product->name}}</td>                                                             
                                 <td> {{$movement->observations}}</td>
-                                <td> {{$movement->typeMovement->type_movement}}</td>
-                                <td> {{$movement->product->name}}</td>
                                 <td> {{$movement->user->name}}</td>
+                                
 
 
                                 <td style="white-space: nowrap; display: flex; align-items: center;">

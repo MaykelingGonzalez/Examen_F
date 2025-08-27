@@ -10,21 +10,10 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="form-group">
-                <label class="form-control-label" for="observations">Observaciones</label>
-                <input type="text" id="observations" name="observations" class="form-control form-control-alternative"
-                placeholder="Ingresar observaciones"
-                value="{{ old('observations', $movements->observations) }}"> 
-            </div>
-        </div>
-    </div>
-
     <div class="col-lg-6">
         <div class="form-group">
             <label  for="type_movement_id">
-                <i class="fas fa-user-graduate"> Tipo de movimiento</i> 
+                <i class="fas fa-exchange-alt"> Tipo de movimiento</i> 
             </label>
             <select name="type_movement_id" id="type_movement_id" class="form-control form-control-alternative">
                 <option disabled selected>Seleccionar un tipo de movimiento</option>
@@ -41,7 +30,7 @@
     <div class="col-lg-6">
         <div class="form-group">
             <label  for="product_id">
-                <i class="fas fa-user-graduate"> Producto</i> 
+                <i class="fas fa-box"> Producto</i> 
             </label>
             <select name="product_id" id="product_id" class="form-control form-control-alternative">
                 <option disabled selected>Seleccionar un producto</option>
@@ -54,11 +43,23 @@
             </select>
         </div>
     </div>  
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="form-group">
+                <label class="form-control-label" for="observations"> <i class="fas fa-comment-dots"></i> Observaciones</label>
+                <input type="text" id="observations" name="observations" class="form-control form-control-alternative"
+                placeholder="Ingresar observaciones"
+                value="{{ old('observations', $movements->observations) }}"> 
+            </div>
+        </div>
+    </div>
+
     
     <div class="col-lg-6">
         <div class="form-group">
             <label  for="user_id">
-                <i class="fas fa-user-graduate"> Usuario</i> 
+                <i class="fas fa-user"> Usuario</i> 
             </label>
             <select name="user_id" id="user_id" class="form-control form-control-alternative">
                 <option disabled selected>Seleccionar un usuario</option>
@@ -76,7 +77,6 @@
 
 <hr class="my-4"/>
 
-<h6 class="heading-small text-muted mb-4">Guardar</h6>
 
 <div class="pl-lg-4">
     <div class="form-group">
