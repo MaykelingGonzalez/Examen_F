@@ -9,7 +9,9 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <h3 class="mb-0"><b> Movimientos</b></h3>
 
-                        <a href="{{ route('movements.export.excel') }}" class="btn btn-success">
+                        <div class=" mt-2 mt-md-0" role="group" aria-label="Botones de acción">
+
+                        <a href="{{ route('movements.export.excel') }}" class="btn btn-success mr-3 rounded-full">
                             <i class="fas fa-file-excel"></i> Exportar a Excel
                         </a>   
 
@@ -17,6 +19,7 @@
                             <i class="fas fa-plus"> </i> <b>Nuevo movimiento</b>
                         </a>
                     </div>
+                </div>
                 </div>
                 <div class="table-responsive">
                     <table class="table align-items-center table-flush">
