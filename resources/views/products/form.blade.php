@@ -1,6 +1,6 @@
 <div class="pl-lg-4">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-8">
             <div class="form-group">
                 <label class="form-control-label" for="product_code"><i class="fas fa-barcode"></i> <b>Código de producto</b></label>
                 <input type="text" id="product_code" name="product_code" class="form-control form-control-alternative"
@@ -8,10 +8,8 @@
                 value="{{ old('product_code', $products->product_code) }}"> 
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-lg-6">
+        <div class="col-8">
             <div class="form-group">
                 <label class="form-control-label" for="name"><i class="fas fa-box"></i><b> Producto</b></label>
                 <input type="text" id="name" name="name" class="form-control form-control-alternative"
@@ -19,9 +17,8 @@
                 value="{{ old('name', $products->name) }}"> 
             </div>
         </div>
-    </div>
 
-    <div class="col-lg-6">
+    <div class="col-8">
         <div class="form-group">
             <label  for="measureUnit_id">
                 <i class="fas fa-ruler"></i><b> Unidad de medida</b>
@@ -38,8 +35,7 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-lg-6">
+        <div class="col-8">
             <div class="form-group">
                 <label class="form-control-label" for="price"><i class="fas fa-money-bill"></i><b> Precio unitario</b></label>
                 <input type="text" id="price" name="price" class="form-control form-control-alternative"
@@ -47,10 +43,8 @@
                 value="{{ old('price', $products->price) }}"> 
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-lg-6">
+        <div class="col-8">
             <div class="form-group">
                 <label class="form-control-label" for="description"><i class="fas fa-pen"></i><b> Descripción</b></label>
                 <input type="text" id="description" name="description" class="form-control form-control-alternative"
@@ -58,9 +52,8 @@
                 value="{{ old('description', $products->description) }}"> 
             </div>
         </div>
-    </div>
 
-    <div class="col-lg-6">
+    <div class="col-8">
         <div class="form-group">
             <label  for="category_id">
                 <i class="fas fa-tags"></i><b> Categoría</b>
@@ -77,8 +70,8 @@
         </div>
     </div>
 
-       
-    <div class="col-lg-6">
+
+    <div class="col-8">
         <div class="form-group">
             <label  for="supplier_id">
                 <i class="fas fa-truck"></i><b> Proveedor</b>
