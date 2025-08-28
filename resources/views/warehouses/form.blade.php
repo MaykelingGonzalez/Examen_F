@@ -1,6 +1,6 @@
 <div class="pl-lg-4">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-8">
             <div class="form-group">
                 <label class="form-control-label" for="warehouse_code"> <i class="fas fa-barcode"></i> <b>Código de bodega</b></label>
                 <input type="text" id="warehouse_code" name="warehouse_code" class="form-control form-control-alternative"
@@ -8,10 +8,8 @@
                 value="{{ old('warehouse_code', $warehouses->warehouse_code) }}"> 
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-lg-6">
+        <div class="col-8">
             <div class="form-group">
                 <label class="form-control-label" for="name"><i class="fas fa-warehouse"></i><b> Bodega</b></label>
                 <input type="text" id="name" name="name" class="form-control form-control-alternative"
@@ -19,10 +17,8 @@
                 value="{{ old('name', $warehouses->name) }}"> 
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-lg-6">
+        <div class="col-8">
             <div class="form-group">
                 <label class="form-control-label" for="location"><i class="fas fa-map-pin"></i><b> Ubicación</b></label>
                 <input type="text" id="location" name="location" class="form-control form-control-alternative"
@@ -30,9 +26,8 @@
                 value="{{ old('location', $warehouses->location) }}"> 
             </div>
         </div>
-    </div>
 
-    <div class="col-lg-6">
+    <div class="col-8">
         <div class="form-group">
             <label  for="responsible_id">
                 <i class="fas fa-user"></i><b> Responsable</b>
@@ -48,7 +43,7 @@
             </select>
         </div>
     </div>
-
+</div>
 
 <hr class="my-4"/>
 
