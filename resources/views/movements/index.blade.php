@@ -27,7 +27,8 @@
                             <tr>
                                 <th scope="col"><i class="fas fa-exchange-alt "></i><b> Cantidad de movimientos</b></th>
                                 <th scope="col"><i class="fas fa-exchange-alt"></i><b> Tipo de movimiento</b></th>
-                                <th scope="col"><i class="fas fa-calendar"></i><b> Fecha</b></th>     
+                                <th scope="col"><i class="fas fa-calendar"></i><b> Fecha de creación</b></th>     
+                                <th scope="col"><i class="fas fa-calendar"></i><b> Última actualización</b></th>
                                 <th scope="col"><i class="fas fa-box"></i><b> Producto</b></th>                                                           
                                 <th scope="col"><i class="fas fa-comment-dots"></i><b> Observaciones</b></th>                                
                                 <th scope="col"><i class="fas fa-user"></i><b> Usuario responsable</b></th>
@@ -39,7 +40,8 @@
                             <tr>                               
                                 <td> {{$movement->quantity}}</td>
                                 <td> {{$movement->typeMovement->type_movement}}</td> 
-                                <td> {{$movement->created_at}}</td>  
+                                <td> {{ $movement->created_at->timezone('America/Managua')->format('d/m/Y H:i') }} </td>
+                                <td> {{ $movement->updated_at->timezone('America/Managua')->format('d/m/Y H:i') }} </td>
                                 <td> {{$movement->product->name}}</td>                                                             
                                 <td> {{$movement->observations}}</td>
                                 <td> {{$movement->user->name}}</td>

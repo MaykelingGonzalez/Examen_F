@@ -9,7 +9,11 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <h3 class="mb-0"><b>Inventario</b></h3>
 
-                        <div class="btn-group mt-2 mt-md-0" role="group" aria-label="Botones de acción">
+                        <div class=" mt-2 mt-md-0" role="group" aria-label="Botones de acción">
+
+                        <a href="{{ route('inventories.export.excel') }}" class="btn btn-success mr-3 rounded-full">
+                            <i class="fas fa-file-excel"></i> Exportar a Excel
+                        </a>   
 
                         <a href="{{ route('inventories.create') }}" class="btn btn-primary">
                             <i class="fas fa-plus"></i> <b>Nuevo Inventario</b>
@@ -28,7 +32,8 @@
                                 <th scope="col"><i class="fas fa-pen"></i><b> Descripción</b></th>
                                 
                                 <th scope="col"><i class="fas fa-warehouse"></i><b> Bodega</b></th>
-                                <th scope="col"><i class="fas fa-calendar"></i><b> Fecha</b></th>
+                                <th scope="col"><i class="fas fa-calendar"></i><b> Fecha de creación</b></th>
+                                <th scope="col"><i class="fas fa-calendar"></i><b> Última actualización</b></th>
                                 <th scope="col"><i class="fas fa-bars"></i><b> Acciones</b></th>
                             </tr>
                         </thead>
@@ -41,7 +46,8 @@
                                     <td>{{ $inventory->maximum_quantity }}</td>
                                     <td>{{ $inventory->description }}</td> 
                                     <td>{{ $inventory->warehouse->name }}</td>
-                                    <td>{{ $inventory->created_at }}</td>
+                                    <td> {{ $inventory->created_at->timezone('America/Managua')->format('d/m/Y H:i') }} </td>
+                                    <td> {{ $inventory->updated_at->timezone('America/Managua')->format('d/m/Y H:i') }} </td>
 
 
                                 <td style="white-space: nowrap; display: flex; align-items: center;">
