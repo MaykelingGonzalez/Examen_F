@@ -14,7 +14,7 @@
         <script>
             Swal.fire({
                 icon: 'error',
-                title: 'Oops... Algo Salio Mal',
+                title: 'Oops... Algo Salió Mal',
                 text: '{{ session('error') }}',
                 showConfirmButton: true,
             });
@@ -25,7 +25,7 @@
         <script>
             Swal.fire({
                 icon: 'warning',
-                title: 'Borrado',
+                title: 'Eliminado correctamente',
                 text: '{{ session('deleted') }}',
                 showConfirmButton: true,
             });
@@ -70,7 +70,7 @@
     <script>
         Swal.fire({
             icon: 'error',
-            title: 'Oops... Algo Salio Mal',
+            title: 'Oops... Algo Salió Mal',
             html: `
             <ul>
                 @foreach ($errors->all() as $error)
