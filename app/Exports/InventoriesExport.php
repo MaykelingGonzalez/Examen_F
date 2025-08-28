@@ -2,25 +2,27 @@
 
 namespace App\Exports;
 
-use App\Models\Movement;
+use App\Models\Inventory;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
-class MovementsExport implements FromCollection, WithHeadings
+class InventoriesExport implements FromCollection, WithHeadings
 {
     public function collection()
     {
-        return Movement::with(['typeMovement', 'product', 'user'])
+        return Inventory::with(['product', 'warehouse'])
             ->get() //Para ejecutar y obtener registros
             ->map(function ($m) { //Transformar los datos para exportarlos
                 return [
-                    'Cantidad'        => $m->quantity,                    
-                    'Tipo de Movimiento'=> optional($m->typeMovement)->type_movement ?? 'N/A',
+                    'Producto'        => optional($m->product)->name ?? 'N/A',
+                    'Cantidad actual' => $m->current_quantity,
+                    'Cantidad mínima' => $m->minimum_quantity,
+                    'Cantidad máxima' => $m->maximum_quantity,
+                    'Descripción' => $m->description,
+                    'Bodega'=> optional($m->warehouse)->name ?? 'N/A',
                     'Fecha de creación' => optional($m->created_at)?->format('d/m/Y H:i'),
                     'Última actualización' => optional($m->updated_at)?->format('d/m/Y H:i'),
-                    'Producto'=> optional($m->product)->name ?? 'N/A',
-                    'Observaciones'=> $m->observations,
-                    'Usuario responsable'=> optional($m->user)->name ?? 'N/A',
+                    
                  //El optional() es para evitar errores si o hay registros con las foráneas y N/A que va retornar si no hay nada y $m representa los movimientos
                 ];
             });
@@ -29,13 +31,14 @@ class MovementsExport implements FromCollection, WithHeadings
     public function headings(): array
     {
         return [
-            'Cantidad',
-            'Tipo de Movimiento',
+            'Producto',
+            'Cantidad actual',
+            'Cantidad mínima',
+            'Cantidad máxima',
+            'Descripción',
+            'Bodega',
             'Fecha de creación',
             'Última actualización',
-            'Producto',
-            'Observaciones',
-            'Usuario responsable',
         ];
     }
 }
