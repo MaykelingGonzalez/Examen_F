@@ -20,6 +20,7 @@
                             </a>
                         </div>
                     </div>
+                    
                     <!-- Filtros debajo de los botones -->
                     <div class="mt-5 mb-4">
                         <form method="GET" action="{{ route('movements.index') }}" class="d-flex flex-wrap align-items-end">
