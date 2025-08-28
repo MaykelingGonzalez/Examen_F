@@ -15,11 +15,31 @@ class ProductController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::with('category', 'measureUnit', 'supplier')->paginate(10);
-        return view('products.index', compact('products'));
+        // Obtener categorías y proveedores para los select
+        $categories = Category::all();
+        $suppliers = Supplier::all();
+
+        // Consulta base con relaciones
+        $query = Product::with('category', 'measureUnit', 'supplier');
+
+        // Filtrar por categoría
+        if ($request->filled('category')) {
+            $query->where('category_id', $request->category);
+        }
+
+        // Filtrar por proveedor
+        if ($request->filled('supplier')) {
+            $query->where('supplier_id', $request->supplier);
+        }
+
+        // Paginación
+        $products = $query->orderBy('name')->paginate(10)->withQueryString();
+
+        return view('products.index', compact('products', 'categories', 'suppliers'));
     }
+
 
     /**
      * Show the form for creating a new resource.
