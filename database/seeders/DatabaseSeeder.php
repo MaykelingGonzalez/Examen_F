@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create(
             [
-                'name' => 'prueba',
+                'name' => 'Prueba',
                 'email' => 'prueba@gmail.com',
                 'password' => bcrypt('prueba@gmail.com')
             ],
@@ -28,17 +28,17 @@ class DatabaseSeeder extends Seeder
 
         User::factory()->create(
             [
-                'name' => 'Limber Rodriguez',
-                'email' => 'limber@gmail.com',
-                'password' => bcrypt('limber@gmail.com')
+                'name' => 'Maykeling González',
+                'email' => 'maykeling@gmail.com',
+                'password' => bcrypt('maykeling@gmail.com')
             ],
         );
 
         User::factory()->create(
             [
-                'name' => 'Test User',
-                'email' => 'test@gmail.com',
-                'password' => bcrypt('test@gmail.com')
+                'name' => 'Maicol Estrada',
+                'email' => 'maicol@gmail.com',
+                'password' => bcrypt('maicol@gmail.com')
             ],
         );
 
