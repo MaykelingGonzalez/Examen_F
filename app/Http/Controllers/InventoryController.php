@@ -7,6 +7,8 @@ use App\Models\Inventory;
 use App\Models\Product;
 use App\Models\Warehouse;
 use App\Http\Requests\InventoryRequest;
+use App\Exports\InventoriesExport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class InventoryController extends Controller
 {
@@ -79,5 +81,10 @@ class InventoryController extends Controller
         $inventories = Inventory::find($id);
         $inventories->delete();
         return redirect()->route('inventories.index')->with('deleted', 'Inventario eliminado exitosamente.');
+    }
+
+    public function export()
+    {
+        return Excel::download(new InventoriesExport, 'inventarios.xlsx');
     }
 }
