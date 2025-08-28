@@ -38,7 +38,7 @@
         <li class="nav-item {{ Request::route()->named('suppliers.index') ? 'active' : '' }}">
             <a class="nav-link {{ Request::route()->named('suppliers.index') ? 'active' : '' }}"
                 href="{{ route('suppliers.index') }}" wire:navigate>
-                <i class="fas fa-boxes" style="color: #666cd9;"></i> Proveedores
+                <i class="fas fa-truck" style="color: #666cd9;"></i> Proveedores
             </a>
         </li>
         

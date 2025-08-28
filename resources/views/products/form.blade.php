@@ -81,7 +81,7 @@
     <div class="col-lg-6">
         <div class="form-group">
             <label  for="supplier_id">
-                <i class="fas fa-boxes"></i><b> Proveedor</b>
+                <i class="fas fa-truck"></i><b> Proveedor</b>
             </label>
             <select name="supplier_id" id="supplier_id" class="form-control form-control-alternative">
                 <option disabled selected>Seleccionar un proveedor</option>
