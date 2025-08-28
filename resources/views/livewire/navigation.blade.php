@@ -41,7 +41,26 @@
                 <i class="fas fa-boxes" style="color: #666cd9;"></i> Proveedores
             </a>
         </li>
-
+        
+        <li class="nav-item {{ Request::route()->named('measure_units.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('measure_units.index') ? 'active' : '' }}"
+            href="{{ route('measure_units.index') }}" wire:navigate>
+            <i class="fas fa-ruler" style="color: #666cd9;"></i> Unidades de Medida
+        </a>
+        </li>
+    
+        <li class="nav-item {{ Request::route()->named('categories.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('categories.index') ? 'active' : '' }}"
+                href="{{ route('categories.index') }}" wire:navigate>
+                <i class="fas fa-tags" style="color: #666cd9;"></i> Categorías
+            </a>
+        </li>
+        <li class="nav-item {{ Request::route()->named('products.index') ? 'active' : '' }}">
+            <a class="nav-link {{ Request::route()->named('products.index') ? 'active' : '' }}"
+                href="{{ route('products.index') }}" wire:navigate>
+                <i class="fas fa-box" style="color: #666cd9;"></i> Productos
+            </a>
+        </li>
         <li class="nav-item {{ Request::route()->named('type_movements.index') ? 'active' : '' }}">
             <a class="nav-link {{ Request::route()->named('type_movements.index') ? 'active' : '' }}"
                 href="{{ route('type_movements.index') }}" wire:navigate>
@@ -49,26 +68,6 @@
             </a>
         </li>
 
-        <li class="nav-item {{ Request::route()->named('measure_units.index') ? 'active' : '' }}">
-            <a class="nav-link {{ Request::route()->named('measure_units.index') ? 'active' : '' }}"
-                href="{{ route('measure_units.index') }}" wire:navigate>
-                <i class="fas fa-ruler" style="color: #666cd9;"></i> Unidades de Medida
-            </a>
-        </li>
-
-        <li class="nav-item {{ Request::route()->named('categories.index') ? 'active' : '' }}">
-            <a class="nav-link {{ Request::route()->named('categories.index') ? 'active' : '' }}"
-                href="{{ route('categories.index') }}" wire:navigate>
-                <i class="fas fa-tags" style="color: #666cd9;"></i> Categorías
-            </a>
-        </li>
-
-        <li class="nav-item {{ Request::route()->named('products.index') ? 'active' : '' }}">
-            <a class="nav-link {{ Request::route()->named('products.index') ? 'active' : '' }}"
-                href="{{ route('products.index') }}" wire:navigate>
-                <i class="fas fa-box" style="color: #666cd9;"></i> Productos
-            </a>
-        </li>
 
         <li class="nav-item {{ Request::route()->named('movements.index') ? 'active' : '' }}">
             <a class="nav-link {{ Request::route()->named('movements.index') ? 'active' : '' }}"
