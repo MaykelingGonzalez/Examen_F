@@ -1,6 +1,6 @@
 <div class="pl-lg-4">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-8">
             <div class="form-group">
                 <label class="form-control-label" for="quantity"><i class="fas fa-exchange-alt"></i> Cantidad de movimientos</label>
                 <input type="text" id="quantity" name="quantity" class="form-control form-control-alternative"
@@ -8,9 +8,8 @@
                 value="{{ old('quantity', $movements->quantity) }}"> 
             </div>
         </div>
-    </div>
 
-    <div class="col-lg-6">
+    <div class="col-8">
         <div class="form-group">
             <label  for="type_movement_id">
                 <i class="fas fa-exchange-alt"> Tipo de movimiento</i> 
@@ -27,7 +26,7 @@
         </div>
     </div>
 
-    <div class="col-lg-6">
+    <div class="col-8">
         <div class="form-group">
             <label  for="product_id">
                 <i class="fas fa-box"> Producto</i> 
@@ -44,8 +43,7 @@
         </div>
     </div>  
 
-    <div class="row">
-        <div class="col-lg-6">
+        <div class="col-8">
             <div class="form-group">
                 <label class="form-control-label" for="observations"> <i class="fas fa-comment-dots"></i> Observaciones</label>
                 <input type="text" id="observations" name="observations" class="form-control form-control-alternative"
@@ -53,10 +51,8 @@
                 value="{{ old('observations', $movements->observations) }}"> 
             </div>
         </div>
-    </div>
-
     
-    <div class="col-lg-6">
+    <div class="col-8">
         <div class="form-group">
             <label  for="user_id">
                 <i class="fas fa-user"> Usuario</i> 
