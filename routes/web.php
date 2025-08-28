@@ -14,6 +14,7 @@ use App\Http\Controllers\InventoryController;
 use App\Exports\SuppliersExport;
 use App\Exports\ProductsExport;
 use App\Exports\MovementsExport;
+use App\Exports\InventoriesExport;
 use Maatwebsite\Excel\Facades\Excel;
 
 
@@ -61,6 +62,9 @@ Route::middleware('auth')->group(function () {
     Route::resource('/warehouses', WarehouseController::class);
 
     Route::resource('/inventories', InventoryController::class);
+    Route::get('/inventories/export/excel', function () {
+        return Excel::download(new InventoriesExport, 'ReporteInventarios.xlsx');
+    })->name('inventories.export.excel');
 
 });
 
