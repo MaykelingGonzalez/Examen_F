@@ -15,10 +15,41 @@ class MovementController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $movements = Movement::with('typeMovement', 'product', 'user')->paginate(10);
-        return view('movements.index', compact('movements'));
+        $products = Product::all(); // Para seleccionarproductos
+
+        $query = Movement::with(['typeMovement', 'product', 'user']);
+
+        // Filtrar por mes y año de creación
+        if ($request->filled('created_month')) {
+            [$year, $month] = explode('-', $request->created_month);
+            $query->whereYear('created_at', $year)
+                ->whereMonth('created_at', $month);
+        }
+
+        // Filtrar por mes y año de actualización
+        if ($request->filled('updated_month')) {
+            [$year, $month] = explode('-', $request->updated_month);
+            $query->whereYear('updated_at', $year)
+                ->whereMonth('updated_at', $month);
+        }
+
+        // Filtrar por tipo de movimiento (Entrada / Salida)
+        if ($request->filled('type_movement')) {
+            $query->whereHas('typeMovement', function($q) use ($request) {
+                $q->where('type_movement', $request->type_movement);
+            });
+        }
+
+        // Filtrar por producto
+        if ($request->filled('product')) {
+            $query->where('product_id', $request->product);
+        }
+
+        $movements = $query->orderBy('created_at', 'desc')->paginate(10)->withQueryString();
+
+        return view('movements.index', compact('movements', 'products'));
     }
 
     /**
