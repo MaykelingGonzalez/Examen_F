@@ -92,7 +92,7 @@
                         <div class="col-lg-12">
                             <div class="form-group">
                                 <label for="form-control-label" for="supplier_id">
-                                    <i class="fas fa-boxes"></i><b> Nombre del proveedor</b>
+                                    <i class="fas fa-truck"></i><b> Nombre del proveedor</b>
                                 </label>
                                 <p>{{ $products->supplier->company }}</p>
                             </div>
