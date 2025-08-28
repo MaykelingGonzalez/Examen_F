@@ -78,15 +78,15 @@
                 <table class="table align-items-center table-flush">
                     <thead>
                         <tr>
-                            <th>Producto</th>
-                            <th>Cantidad actual</th>
-                            <th>Cantidad mínima</th>
-                            <th>Cantidad máxima</th>
-                            <th>Descripción</th>
-                            <th>Bodega</th>
-                            <th>Fecha de creación</th>
-                            <th>Última actualización</th>
-                            <th>Acciones</th>
+                            <th scope="col"><i class="fas fa-barcode"></i> Producto</th>
+                            <th scope="col"><i class="fas fa-arrow-up"></i> Cantidad actual</th>
+                            <th scope="col"><i class="fas fa-arrow-down"></i> Cantidad mínima</th>
+                            <th scope="col"><i class="fas fa-arrow-up"></i> Cantidad máxima</th>
+                            <th scope="col"><i class="fas fa-pen"></i> Descripción</th>
+                            <th scope="col"><i class="fas fa-warehouse"></i> Bodega</th>
+                            <th scope="col"><i class="fas fa-calendar"></i> Fecha de creación</th>
+                            <th scope="col"><i class="fas fa-calendar"></i> Última actualización</th>
+                            <th scope="col"><i class="fas fa-bars"></i> Acciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -100,16 +100,24 @@
                             <td>{{ $inventory->warehouse->name }}</td>
                             <td>{{ $inventory->created_at->timezone('America/Managua')->format('d/m/Y H:i') }}</td>
                             <td>{{ $inventory->updated_at->timezone('America/Managua')->format('d/m/Y H:i') }}</td>
-                            <td class="d-flex">
-                                <a href="{{ route('inventories.show', $inventory->id) }}" class="btn btn-primary btn-sm mr-1">Mostrar</a>
-                                <a href="{{ route('inventories.edit', $inventory->id) }}" class="btn btn-info btn-sm mr-1">Editar</a>
-                                <form action="{{ route('inventories.destroy', $inventory->id) }}" method="POST"
-                                      onsubmit="return confirm('¿Está seguro que desea eliminar este inventario?');">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
-                                </form>
-                            </td>
+                           <td style="white-space: nowrap; display: flex; align-items: center;">
+                                        <a href="{{ route('inventories.show', $inventory->id) }}" class="btn btn-primary btn-sm"
+                                            style="margin-right: 5px;">
+                                            <i class="fas fa-eye"></i> Mostrar
+                                        </a>
+                                        <a href="{{ route('inventories.edit', $inventory->id) }}" class="btn btn-info btn-sm"
+                                            style="margin-right: 5px;">
+                                            <i class="fas fa-edit"></i> Editar
+                                        </a>
+                                        <form action="{{ route('inventories.destroy', $inventory->id) }}" method="POST"
+                                            style="display: inline-block; margin: 0; display: flex; align-items: center;">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" class="btn btn-danger btn-sm">
+                                                <i class="fas fa-trash"></i> Eliminar
+                                            </button>
+                                        </form>
+                                    </td>
                         </tr>
                         @endforeach
                     </tbody>

@@ -20,6 +20,18 @@
 
             <div class="card-body">
                 <div class="pl-lg-4">
+
+                <div class="row">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="form-control-label" for="product_id">
+                                    <i class="fas fa-box"></i><b> Nombre del producto</b>
+                                </label>
+                                <p>{{ $inventories->product->name }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
@@ -64,17 +76,7 @@
                         </div>
                     </div>
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="form-group">
-                                <label for="form-control-label" for="product_id">
-                                    <i class="fas fa-box"></i><b> Nombre del producto</b>
-                                </label>
-                                <p>{{ $inventories->product->name }}</p>
-                            </div>
-                        </div>
-                    </div>
-
+                    
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="form-group">
