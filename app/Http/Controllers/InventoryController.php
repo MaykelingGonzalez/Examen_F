@@ -15,11 +15,44 @@ class InventoryController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $inventories = Inventory::with('product', 'warehouse')->paginate(10);
-        return view('inventories.index', compact('inventories'));
+        // Obtener productos y bodegas para los select
+        $products = Product::all();
+        $warehouses = Warehouse::all();
+
+        // Consulta base con relaciones
+        $query = Inventory::with('product', 'warehouse');
+
+        // Filtrar por producto
+        if ($request->filled('product')) {
+            $query->where('product_id', $request->product);
+        }
+
+        // Filtrar por bodega
+        if ($request->filled('warehouse')) {
+            $query->where('warehouse_id', $request->warehouse);
+        }
+
+        // Filtrar por mes y año de creación
+        if ($request->filled('created_month')) {
+            [$year, $month] = explode('-', $request->created_month);
+            $query->whereYear('created_at', $year)
+                ->whereMonth('created_at', $month);
+        }
+
+        // Filtrar por mes y año de actualización
+        if ($request->filled('updated_month')) {
+            [$year, $month] = explode('-', $request->updated_month);
+            $query->whereYear('updated_at', $year)
+                ->whereMonth('updated_at', $month);
+        }
+
+        $inventories = $query->orderBy('created_at', 'desc')->paginate(10)->withQueryString();
+
+        return view('inventories.index', compact('inventories', 'products', 'warehouses'));
     }
+
 
     /**
      * Show the form for creating a new resource.
