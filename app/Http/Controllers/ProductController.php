@@ -35,7 +35,7 @@ class ProductController extends Controller
         }
 
         // Paginación
-        $products = $query->orderBy('name')->paginate(10)->withQueryString();
+        $products = $query->orderBy('product_code')->paginate(10)->withQueryString();
 
         return view('products.index', compact('products', 'categories', 'suppliers'));
     }
