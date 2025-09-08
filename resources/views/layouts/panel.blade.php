@@ -77,7 +77,7 @@
                 <div class="container-fluid">
                     <!-- Brand -->
                     <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block"
-                        href="{{ route('dashboard') }}">Dashboard</a>
+                        href="{{ route('dashboard') }}">Sistema de Inventario</a>
                     <livewire:menu />
                 </div>
             </nav>
@@ -94,7 +94,7 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col">
-                                                    <h5 class="card-title text-uppercase text-muted mb-0">Dato 1</h5>
+                                                    <h5 class="card-title text-uppercase text-muted mb-0">Proveedores</h5>
                                                     <span class="h2 font-weight-bold mb-0">Ejemplo</span>
                                                 </div>
                                                 <div class="col-auto">
@@ -112,7 +112,7 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col">
-                                                    <h5 class="card-title text-uppercase text-muted mb-0">Dato 2</h5>
+                                                    <h5 class="card-title text-uppercase text-muted mb-0">Productos</h5>
                                                     <span class="h2 font-weight-bold mb-0">Ejemplo</span>
                                                 </div>
                                                 <div class="col-auto">
@@ -130,7 +130,7 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col">
-                                                    <h5 class="card-title text-uppercase text-muted mb-0">Dato 3</h5>
+                                                    <h5 class="card-title text-uppercase text-muted mb-0">Movimientos</h5>
                                                     <span class="h2 font-weight-bold mb-0">Ejemplo</span>
                                                 </div>
                                                 <div class="col-auto">
@@ -148,7 +148,7 @@
                                         <div class="card-body">
                                             <div class="row">
                                                 <div class="col">
-                                                    <h5 class="card-title text-uppercase text-muted mb-0">Dato 4</h5>
+                                                    <h5 class="card-title text-uppercase text-muted mb-0">Inventarios</h5>
                                                     <span class="h2 font-weight-bold mb-0">Ejemplo</span>
                                                 </div>
                                                 <div class="col-auto">
